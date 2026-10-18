@@ -274,7 +274,8 @@
 #category.ar-ready .ar-year-label,
 #tag.ar-ready .ar-year-label {
   position: sticky;
-  top: calc(var(--ar-nav-h, 0px) + 49px);
+  /* 顶栏高度 + 胶囊条高度：年份标题贴在吸顶胶囊条正下方，别钻到它底下 */
+  top: calc(var(--ar-nav-h, 0px) + var(--ar-bar-h, 55px));
   z-index: 40;
   display: flex;
   align-items: center;

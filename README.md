@@ -1,11 +1,11 @@
-# hexo-theme-fomalhaut · v1.0.4
+# hexo-theme-fomalhaut · v1.0.5
 
 > 一套「克隆即用」的 Hexo 卡片式博客源码。主题基于 [Butterfly 4.3.1](https://butterfly.js.org/) 深度二次开发，
 > 并把**站点配置**与**主题代码**彻底分开：改配置就能搭起自己的站，升级主题不会冲掉你自己的改动。
 
 ![hexo](https://img.shields.io/badge/Hexo-6.3.0-0e83c?style=flat-square&logo=hexo)
 ![node](https://img.shields.io/badge/Node.js-18%20%7C%2020%20%7C%2022-339933?style=flat-square&logo=nodedotjs)
-![theme](https://img.shields.io/badge/Theme-Fomalhaut%20v1.0.4-6513df?style=flat-square)
+![theme](https://img.shields.io/badge/Theme-Fomalhaut%20v1.0.5-6513df?style=flat-square)
 ![license](https://img.shields.io/badge/License-Apache--2.0-blue?style=flat-square)
 ![stars](https://img.shields.io/github/stars/fomalhaut1998/hexo-theme-fomalhaut?style=flat-square&logo=github&label=Stars)
 ![forks](https://img.shields.io/github/forks/fomalhaut1998/hexo-theme-fomalhaut?style=flat-square&logo=github&label=Forks)
@@ -36,6 +36,42 @@
 
 ## 更新日志
 
+### v1.0.5 — 日夜自动模式与一批动效修复（2026-10-18）
+
+这一版补上「访客没手动选过深浅色时，按当天真实日出日落自动切换」，把日夜判断收成一份共享实现、侧栏日历与美化面板都改成委托它；首页卡片入场动画从缩放改成纯淡入，并修好 pjax 换页后哑火的老毛病；归档页年份胶囊居中不再把整页顶下去，评论区楼中楼的表情面板被压住点不动的问题一并修掉。
+
+**全站日夜首屏预置**（新增 `source/js/inject/daynight-boot.js`）
+
+- 访客没手动选过深浅色时，按当天**真实日出日落**定模式：坐标按「站点配置 → 位置服务 → 上次日历定位 → 按时区推经度」四级兜底，极昼极夜不切换；
+- 算法只在 `head` 里跑一份 —— 侧栏日历与美化面板的 `isDayNow` / `setMode` / `applyDayNight` 改为优先委托 `window.fomalDayNight`，取不到才用自带实现兜底；
+- 修「夜间模式下点『随便逛逛』整页跳转后闪回白天」：首屏先落地 `data-theme` 再显示页面，`DOMContentLoaded` 再补一次；站点旋钮 `window.fomalNightConfig = { enabled, latLng, themeKey }` 写在 `inject.head` 那行内联脚本里，`enabled: false` 即只认手动与系统设置。
+
+**手动选择优先 + 自动切换听总开关**（`source/js/aside-calendar.js`、`source/js/modules/settings.js`）
+
+- 手动选过就记 `theme`（带过期时间，过期自动清理），期间不自动切换；旧版存在 `localStorage` 的日历坐标会上报给共享实现；
+- 「8 小时自动切换」在总开关为 `false` 时不再动手，并修掉切回白天时 `body` 误用 `classList.add('DarkMode')` 的老 bug（原来切回白天后仍被判成夜里）。
+
+**首页卡片入场改纯淡入**（`_config.fomalhaut.yml` 的 `wowjs.animateitem`）
+
+- 文章卡片与侧栏卡片从 `animate__zoomIn` / 2s / 延迟 200ms / offset 30 改成 `animate__fadeIn` / 700ms / 无延迟 / offset 0，首屏不再空一片等缩放；
+- 删掉两组被注释掉的重复配置（置顶轮播与分类磁贴），换成说明：`class` 写多个会命中内层元素、`catalog_magnet` 是 `id` 不是 `class`。
+
+**pjax 换页后入场动画不再哑火**（新增 `scripts/wow-pjax-rehook.js`）
+
+- 构建期往 `</body>` 前注入一段脚本：`pjax:complete` 后重放 `.js-pjax` 里因重复初始化而哑火的 wow 加类脚本，再补一次 `wow.doSync(document.body)` 并清掉失效的 boxes。
+
+**归档页与评论区两处小修**
+
+- 归档页年份胶囊居中改用 `track.scrollBy`（不再用 `scrollIntoView`，避免整页被顶下 61px、顶栏跟着抖），新增 `--ar-bar-h`，并对 `#page-header` 监听 `nav-fixed`、pjax 往返复用同一套监听（`source/js/inject/archive-page.js`、`source/css/archive-page.css`）；
+- 评论区楼中楼展开的表情面板被后一条评论压住点不动：`.twikoo .tk-comment:has(.OwO-open)` 提到 `z-index: 3`（`source/css/twikoo.css`）。
+
+**回归脚本 13 → 14 个**（`tools/tests/`）
+
+- 新增 `daynight-boot.test.cjs`：`node:test` + `vm` 钉住「现在」，覆盖站点旋钮（`enabled` / `latLng` / `themeKey` 与运行期 `setConfig`）、手动选择优先与过期清理、以及「8 小时自动切换」是否听总开关。
+
+**版本号**
+
+- 根 `package.json` / `package-lock.json`、`themes/fomalhaut/package.json`、主题 README、启动横幅（`welcome.js`）与页脚徽章 title 一起升到 `1.0.5`；上游 Butterfly 版本仍走 `scripts/butterfly-version.js`（4.3.1）。
 ### v1.0.4 — 美化面板预览化与导航改版（2026-10-11）
 
 这一版把「美化设置面板」从一长条滑条重做成可预览的分区，新增 5 个前端模块与 8 个回归脚本；顶栏导航抽出一份独立样式表并按设备能力降级磨砂；夜间切换改成三段小动画，整屏遮挡从 3000ms 压到约 900ms；另修一批小毛病（数字框裁切、目录连点互抢、搜索提示残留、帧率条对比度）。
@@ -539,6 +575,7 @@ npx hexo clean && npx hexo generate && npx gulp
 | 文件 | 负责的功能 |
 | --- | --- |
 | `beauty-boot.js` | 美化模块首屏预置（把 localStorage 里的字体/主题色/背景尽早写进 `:root`，避免闪一下默认样式） |
+| `daynight-boot.js` | 全站日夜首屏预置：访客没手动选过时按真实日出日落定深浅色，并把 `window.fomalDayNight` 共享给侧栏日历与美化面板（旋钮 `window.fomalNightConfig`） |
 | `typewriter.js` | 首页副标题打字机「丝滑版」（同名 `window.Typed` 接管主题自带 Typed.js） |
 | `search-lazy.js` | Algolia 搜索按需加载（点开搜索才拉取） |
 | `scroll-gap-fix.js` | 锚点跳转补偿（常驻顶栏 70px） |
@@ -563,6 +600,7 @@ npx hexo clean && npx hexo generate && npx gulp
 | `swiper-lazyload-fix.js` | 修首页轮播在 pjax 往返后懒加载失效 |
 | `tag-map-local.js` | 把 `hexo-tag-map` 的 jsDelivr CDN 改成本站自托管 |
 | `vercel-api-copy.js` | 构建后把 `api/`、`functions/`、`vercel.json` 拷进 `public/` |
+| `wow-pjax-rehook.js` | pjax 换页后重放 `.js-pjax` 里哑火的 wow 加类脚本，补 `wow.doSync()` 并清掉失效 boxes |
 
 ### 7.5 `tools/tests/` —— 回归脚本
 
@@ -583,8 +621,9 @@ npx hexo clean && npx hexo generate && npx gulp
 | `snow.test.cjs` | 雪花分层下落、dt 上限、厚度上限与暂停条件 |
 | `ripple.test.cjs` | 涟漪同时存在上限、节点回收与非主键忽略 |
 | `navigation.test.cjs` | 导航触控区尺寸、磨砂降级条件与站名溢出规则 |
+| `daynight-boot.test.cjs` | 日夜首屏预置：站点旋钮与运行期 `setConfig`、手动选择优先与过期清理、8 小时自动切换是否听总开关 |
 
-跑法：`node --test "tools/tests/*.test.cjs"`（13 个脚本；部分脚本支持用环境变量指向 `bak/` 里的基线做前后对比）。
+跑法：`node --test "tools/tests/*.test.cjs"`（14 个脚本；部分脚本支持用环境变量指向 `bak/` 里的基线做前后对比）。
 
 ### 7.6 `themes/fomalhaut/` —— 主题本体
 

@@ -1,7 +1,7 @@
 const logger = require('hexo-log')()
 
 // FOMALHAUT 主题自有版本号（改这里即可）
-const fomalhautVersion = '1.0.4'
+const fomalhautVersion = '1.0.5'
 // 上游 Butterfly 版本：显示继承关系，cdn.js 也用它拼 jsdelivr / unpkg 地址。
 // 它是「fork 自哪个 Butterfly」，与主题自己的版本（package.json 的 version）是两回事。
 const butterflyVersion = require('../butterfly-version')

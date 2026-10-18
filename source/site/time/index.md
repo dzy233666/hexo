@@ -92,6 +92,18 @@ comments: false
 
 <!-- endtimeline -->
 
+<!-- timeline 2026-10-18 -->
+
+1. 全站日夜首屏预置（新增 `source/js/inject/daynight-boot.js`）：访客没手动选过深浅色时，按当天真实日出日落定模式；坐标四级兜底（站点配置 → 位置服务 → 上次日历定位 → 按时区推经度），极昼极夜不切
+2. 日夜判断收成一份共享实现：侧栏日历与美化面板的 `isDayNow` / `setMode` / `applyDayNight` 改为一律优先委托 `window.fomalDayNight`，取不到才用自带实现兜底；修「夜间点『随便逛逛』整页跳转后闪回白天」
+3. 手动选择优先（带过期清理），「8 小时自动切换」听站点总开关 `window.fomalNightConfig.enabled`；顺手修掉切回白天时 `body` 误用 `classList.add('DarkMode')` 的老 bug
+4. 首页卡片入场动画从 `animate__zoomIn` / 2s / 延迟 200ms / offset 30 改成 `animate__fadeIn` / 700ms / 无延迟 / offset 0，并删掉两组被注释掉的重复配置
+5. 修 pjax 换页后入场动画哑火（新增 `scripts/wow-pjax-rehook.js`）：`pjax:complete` 后重放 `.js-pjax` 里失效的加类脚本，补 `wow.doSync(document.body)` 并清掉失效 boxes
+6. 归档页年份胶囊居中改用 `track.scrollBy`（不再把整页顶下 61px、顶栏跟着抖）并新增 `--ar-bar-h`；`#page-header` 监听 `nav-fixed`、pjax 往返复用（`archive-page.js` / `archive-page.css`）
+7. 评论区楼中楼表情面板被后一条评论压住点不动：`.twikoo .tk-comment:has(.OwO-open)` 提到 `z-index: 3`（`twikoo.css`）
+
+<!-- endtimeline -->
+
 <!-- timeline 2026-10 -->
 
 1. 全站图片与字体外链改走公共 CDN（jsDelivr），不再依赖作者自建对象存储

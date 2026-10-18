@@ -252,6 +252,8 @@
 
   // 返回访客本机时区的 { rise, set }；极昼极夜返回 null
   function sunTimes(date, lat, lng) {
+    var fdn = sharedApi();
+    if (fdn) return fdn.sunTimes(date, lat, lng);   // 用 head 里那一份（两边逐字同源）
     if (!isFinite(lat) || !isFinite(lng)) return null;
     // n = 自 J2000（2000-01-01 12:00 UT）起的天数。取当天 00:00 UT 再向上取整，
     // 用 floor 会整体早一天（踩过这个坑）
@@ -307,17 +309,48 @@
   function timezoneLng() { return -new Date().getTimezoneOffset() / 4; }
 
   function geo() {
+    var fdn = sharedApi();
+    // 共享实现认得本文件的 CONFIG.sun.latLng（启动时 syncSharedConfig 已汇报），所以有条件就交给它
+    if (fdn) return fdn.geo();
     var c = CONFIG.sun.latLng;
     if (c && isFinite(c[0]) && isFinite(c[1])) return { lat: +c[0], lng: +c[1], src: 'config' };
     return geoFromIp() || readGeo() || { lat: CONFIG.sun.fallbackLat, lng: timezoneLng(), src: 'tz' };
   }
 
   /* ---- 日间 / 夜间 ---- */
+  // 2026-10-14：这整套「没手动选过就按日出日落定模式」的判定，已经被搬到每一页 head 里同步
+  // 执行的 /js/inject/daynight-boot.js —— 因为这张日历卡只在首页渲染，站内整页跳转（比如
+  // 「随便逛逛」的 location.href）过去后就没有执行者了，夜间模式会掉回主题默认的白天。
+  // 下面这几个函数现在优先委托 window.fomalDayNight（算法在仓库里只留一份，免得两边改歪），
+  // 取不到时（脚本被拦、旧缓存、单独引本文件的场景）继续用本文件自带的实现兜底。
+  // 本文件顶部的 CONFIG.sun.latLng / dayNight.enable / dayNight.themeKey 仍然有效：启动时由
+  // syncSharedConfig() 报给共享实现（_config.fomalhaut.yml 里写明的那几项以那边为准）。
+  function sharedApi() { return (global && global.fomalDayNight) || null; }
+
+  // 2026-10-14：本文件这几个旋钮现在归共享实现统一执行（它每页都在跑，文章页也认），所以在第一次
+  // 判定之前把它们汇报上去 —— 否则「卡片按站点坐标显示日出日落、模式却按访客 IP 切换」两边打架。
+  // _config.fomalhaut.yml 里写明的项以那边为准，这里只在那边还是默认值时才补。
+  function syncSharedConfig() {
+    var fdn = sharedApi();
+    if (!fdn || typeof fdn.setConfig !== 'function' || !fdn.config) return;
+    var patch = {};
+    var c = CONFIG.sun.latLng;
+    if (!fdn.config.latLng && c && isFinite(c[0]) && isFinite(c[1])) patch.latLng = [+c[0], +c[1]];
+    if (fdn.config.enabled !== false && CONFIG.dayNight.enable === false) patch.enabled = false;
+    if (fdn.config.themeKey === 'theme' && CONFIG.dayNight.themeKey && CONFIG.dayNight.themeKey !== 'theme') {
+      patch.themeKey = CONFIG.dayNight.themeKey;
+    }
+    if (Object.keys(patch).length) fdn.setConfig(patch);
+  }
+
   // 访客自己选过没有？判据与主题 head 脚本一致：saveToLocal('theme')。
   // fomal.js 手动切换时写的是 saveToLocal.set('theme', …, 2)（2 天有效期，见 fomal.js:1182/1207），
   // 过期就当作没选过、自动模式重新接管；'isDark' 那个键是手动切换时永久写的标记，全站没人读它，
   // 所以不拿它当判据（否则自动模式再也回不来）。
   function hasThemeChoice() {
+    var fdn = sharedApi();
+    // 共享实现读的也是 'theme' 这个键；万一这里配成别的键就各算各的
+    if (fdn && CONFIG.dayNight.themeKey === fdn.themeKey) return fdn.hasChoice();
     var ls = global.localStorage;
     if (!ls) return false;
     try {
@@ -339,6 +372,8 @@
   // fomal.js:1172 用 data-theme 决定切换方向、:1162 用 body.DarkMode 决定加减类，
   // 少写一个访客第一次点月亮按钮就会「没反应」。
   function setMode(isDark) {
+    var fdn = sharedApi();
+    if (fdn) { fdn.setMode(isDark); return; }
     var doc = global.document;
     if (!doc) return;
     if (isDark && typeof global.activateDarkMode === 'function') global.activateDarkMode();
@@ -352,6 +387,8 @@
   // 访客没缓存过深浅色 → 按当天真实日出日落定（有缓存就完全不动，尊重访客的选择）
   function applyDayNight(d) {
     if (!CONFIG.dayNight.enable) return null;
+    var fdn = sharedApi();
+    if (fdn) return fdn.apply(d || now || new Date());
     d = d || now || new Date();
     if (hasThemeChoice()) return null;
     var g = geo();
@@ -364,6 +401,8 @@
 
   // 给 fomal.js 那段「8 小时自动切换日夜」用：白天 true / 夜间 false
   function isDayNow() {
+    var fdn = sharedApi();
+    if (fdn) return fdn.isDayNow();
     var d = now || new Date();
     var g = geo();
     var t = sunTimes(d, g.lat, g.lng);
@@ -634,6 +673,9 @@
 
   // 解析期就把两卡排好（本文件的 <script> 就在日历卡里，此刻公告栏已存在）
   layoutCards();
+
+  // 再把自己这份旧旋钮汇报给共享实现 —— 必须在下面那次 applyDayNight() 之前
+  syncSharedConfig();
 
   // 深浅色也尽早定：本文件是解析期执行（比 defer 的 fomal.js 早），先把模式摆正，
   // fomal.js 那段「8 小时自动切换」看到模式已经对了就不会再改它（它只在模式不对时才动手）。

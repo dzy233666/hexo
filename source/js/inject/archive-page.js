@@ -19,6 +19,10 @@
 (function () {
   'use strict';
 
+  /** pjax 往返共用：正在监听 class 的 #page-header，以及最新一份吸顶偏移计算函数。 */
+  var watchingHdr = null;
+  var refreshNavH = null;
+
   var CHEV = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" ' +
     'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>';
 
@@ -388,9 +392,22 @@
         sections.forEach(function (ref) {
           if (chips[ref.year]) chips[ref.year].classList.toggle('on', ref.year === year);
         });
+        // 只把选中年份在胶囊条里横向居中，绝不让它带动整页滚动：
+        // 本站全局有 html{scroll-padding-top:70px}（给常驻顶栏留位），scrollIntoView
+        // 会认为吸顶条里的胶囊「不在视口内」，每跨一个年份就把窗口往上顶 61px。
+        // 这些反向滚动会让顶栏方向检测反复翻转（菜单收起 / 标题弹出），
+        // 表现就是归档页滚起来一顿一顿 + 导航栏抖动。
         var chip = chips[year];
-        if (chip && chip.scrollIntoView) {
-          try { chip.scrollIntoView({ block: 'nearest', inline: 'nearest' }); } catch (e) {}
+        if (!chip || !track) return;
+        if (track.scrollWidth <= track.clientWidth + 1) return;
+        var cr = chip.getBoundingClientRect();
+        var tr = track.getBoundingClientRect();
+        var delta = cr.left - tr.left - (track.clientWidth - cr.width) / 2;
+        if (Math.abs(delta) < 1) return;
+        try {
+          track.scrollBy({ left: delta, behavior: 'smooth' });
+        } catch (e) {
+          track.scrollLeft += delta;
         }
       }
       function pick() {
@@ -414,11 +431,35 @@
     root.classList.add('ar-ready');
 
     /* ---- 7. 细节 ---- */
+    // --ar-nav-h：顶栏 fixed 时的高度；--ar-bar-h：年份胶囊条的自身高度（年份标题要贴在它下面）
+    var navHLast = -1;
+    var barHLast = -1;
     function applyNavH() {
-      root.style.setProperty('--ar-nav-h', navH() + 'px');
+      var h = navH();
+      if (h !== navHLast) {
+        navHLast = h;
+        root.style.setProperty('--ar-nav-h', h + 'px');
+      }
+      var bar = root.querySelector('.ar-nav');
+      var bh = bar ? Math.round(bar.getBoundingClientRect().height + 2) : 0;
+      if (bh > 0 && bh !== barHLast) {
+        barHLast = bh;
+        root.style.setProperty('--ar-bar-h', bh + 'px');
+      }
     }
     applyNavH();
     window.addEventListener('resize', applyNavH);
+    // 顶栏初始是 absolute，滚过 56px 才被主题加上 nav-fixed（变 fixed）。
+    // 只在 init 算一次的话 --ar-nav-h 永远是 0，吸顶条会整个藏在顶栏底下。
+    // 同一个 #page-header 只挂一个观察器（pjax 往返复用），回调永远走最新那份 applyNavH。
+    refreshNavH = applyNavH;
+    var hdr = document.getElementById('page-header');
+    if (hdr && window.MutationObserver && watchingHdr !== hdr) {
+      watchingHdr = hdr;
+      new MutationObserver(function () {
+        if (refreshNavH) refreshNavH();
+      }).observe(hdr, { attributes: true, attributeFilter: ['class'] });
+    }
 
     // 让 LazyLoad 重新登记封面（我们把 src 直接补成了真图）
     if (window.lazyLoadInstance && typeof window.lazyLoadInstance.update === 'function') {

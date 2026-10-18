@@ -1198,7 +1198,7 @@ inject:
     # Twikoo 评论美化（站点独立样式，不改主题源码）：表单/列表/交互统一到主题色与卡片语言。
     # 源文件 source/css/twikoo.css；只写 Twikoo 2.x 的 .tk-* 类名，配色派生自 --theme-color。
     # 回滚：删掉这一行即可（备份 bak/announcement-20261004-twikoo-ui/before/_config.fomalhaut.yml）。
-    - <link rel="stylesheet" href="/css/twikoo.css?v=20261006b">
+    - <link rel="stylesheet" href="/css/twikoo.css?v=20261018-owo">
     # 已移除 Element-UI CSS（236KB，head 同步阻塞）：全站仅 fomal.js 的 15 处 $notify 用到，已改由 /js/notify.js 承担
     # - <link rel="stylesheet" href="https://registry.npmmirror.com/element-ui/2.15.7/files/lib/theme-chalk/index.css"> # 引入组件库
     # 综合美化模块样式引入
@@ -1265,6 +1265,20 @@ inject:
     - <script src="/js/inject/ping-route.js"></script> # 公告栏线路延时徽标
     - <script src="/js/inject/beauty-boot.js?v=20261015-solid3"></script> # 美化模块首屏预置（原内联 beautyBoot）
     - <script src="/js/inject/right-menu-state-boot.js"></script> # 侧栏「右键模式」按钮状态同步
+    # ── 全站日间 / 夜间首屏预置（站点独立脚本，不改主题源码）────────────────────
+    # source/js/inject/daynight-boot.js：访客没手动选过深浅色时，按当天真实日出日落定模式（有手动
+    #   选择就完全不动）。修「夜间模式点『随便逛逛』跳转后变回白天」—— 那段逻辑原本只挂在日历卡上，
+    #   而日历卡只有首页渲染（文章页的 HTML 里连 aside-calendar.js 都没有），整页跳转后模式就丢了。
+    # 不加 defer：要在首帧之前把 <html data-theme> 定好，否则会先亮后暗闪一下。
+    # 与 source/js/aside-calendar.js 共用同一份算法（那边优先委托 window.fomalDayNight）。
+    # 回滚：删掉下面这一行即可（首页行为不变，非首页退回主题默认的 light，即修复前的样子）。
+    # 全站日夜「自动模式」的旋钮（改这里，别改 daynight-boot.js 里写死的常量）：
+    #   enabled  false = 关掉「访客没手动选过就按日出日落自动定深浅」，fomal.js 那段 8 小时自动切换也听它；
+    #   latLng   写死站点坐标 [纬度, 经度]（写了就用它），null = 按访客定位（IP → asideCalGeo 缓存 → 时区经度）；
+    #   themeKey 访客的手动选择存在哪个 localStorage 键，默认 'theme'（与主题内联脚本 / shell.js 一致）。
+    # 这一行必须在 daynight-boot.js 之前执行；回滚就把下面两行一起删掉。
+    - <script>window.fomalNightConfig=window.fomalNightConfig||{enabled:true,latLng:null,themeKey:'theme'}</script> # 日夜自动模式旋钮
+    - <script src="/js/inject/daynight-boot.js?v=20261014-nightboot2"></script> # 全站日夜首屏预置
     # ── 首页副标题打字机「丝滑版」（站点独立脚本 + 样式，不改主题源码）────────────
     # 主题 subtitle.pug 调 Typed.js 时是 typeSpeed:150 的逐字硬蹦；source/js/inject/typewriter.js
     # 在 <head> 抢先定义同签名的 window.Typed，主题就直接用本实现，也不再从 CDN 拉 typed.min.js。
@@ -1303,8 +1317,8 @@ inject:
     #   没有这段 JSON 时卡片照常渲染、只是少了分类与时长。数据构建期算好，页面零额外请求。
     # 改 css/js 记得把下面两个 ?v= 一起提版本。回滚：删掉下面两行即可
     # （配置备份 bak/20261012-archive-cards/before/_config.fomalhaut.yml）。
-    - <link rel="stylesheet" href="/css/archive-page.css?v=20261013b">
-    - <script defer src="/js/inject/archive-page.js?v=20261013b"></script>
+    - <link rel="stylesheet" href="/css/archive-page.css?v=20261018-scrollfix">
+    - <script defer src="/js/inject/archive-page.js?v=20261018-scrollfix"></script>
 
   bottom:
     - <script defer charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script> # 51la统计（+defer 解除阻塞）
@@ -1443,31 +1457,21 @@ wowjs:
   mobile: false #移动端是否启用，默认移动端禁用
   animateitem:
     - class: recent-post-item #必填项，需要添加动画的元素的class
-      style: animate__zoomIn # animate__zoomIn #必填项，需要添加的动画
-      duration: 2s #选填项，动画持续时间，单位可以是ms也可以是s。例如3s，700ms。
-      delay: 200ms #选填项，动画开始的延迟时间，单位可以是ms也可以是s。例如3s，700ms。
-      offset: 30 #选填项，开始动画的距离（相对浏览器底部）
+      style: animate__fadeIn #必填项，需要添加的动画。纯淡入不位移；原来用 zoomIn（0% 缩到 0.3 倍）在大卡片上跳动感太强
+      duration: 700ms #选填项，动画持续时间。700ms 是"看得出、不拖沓"的甜点值（原来 2s 要 1s 才开始清晰）
+      delay: 0 #选填项，动画开始的延迟时间。原来 200ms 是雪上加霜，现在不要等待
+      offset: 0 #选填项，开始动画的距离（相对浏览器底部）。0 = 顶边一进视口就开始，不再先空一块再淡入
       iteration: 1 #选填项，动画重复的次数
-    # 置顶滚动栏
-    # - class: blog-slider swiper-container-fade swiper-container-horizontal
-    #   style: animate__zoomIn
-    #   duration: 1.5s
-    #   delay: 200ms
-    #   offset: 30
-    #   iteration: 1
-    # 分类磁贴
-    # - class: catalog_magnet
-    #   style: animate__zoomIn
-    #   duration: 1.5s·
-    #   delay: 200ms
-    #   offset: 30
-    #   iteration: 1
+    # 置顶轮播卡（.blog-slider）和分类磁贴（#catalog_magnet）不用单独配：
+    # 它们都在外层 .recent-post-item 里面，已经被上面第一条 animateitem 覆盖。
+    # 另配反而出问题：class 写多个会命中内层元素 → 同一个块叠两层动画；
+    # 而 catalog_magnet 实际是 id 不是 class，getElementsByClassName 选不中。
     # 侧边卡片栏
     - class: card-widget
-      style: animate__zoomIn
-      duration: 2s
-      delay: 200ms
-      offset: 30
+      style: animate__fadeIn
+      duration: 700ms
+      delay: 0
+      offset: 0
       iteration: 1
     # 分页按钮
     # - class: pagination

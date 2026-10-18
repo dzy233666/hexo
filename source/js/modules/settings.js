@@ -660,22 +660,28 @@ function initRangeJump() {
 
 
 // 每12小时强制切换一次夜间模式
+// 2026-10-14：这是「自动决定深浅色」的另一半，所以也听 _config.fomalhaut.yml 里
+// window.fomalNightConfig.enabled 那个总开关 —— 关掉自动模式时这一段同样不许动手。
+var autoNightOff = !!(window.fomalDayNight && window.fomalDayNight.config
+  && window.fomalDayNight.config.enabled === false);
 if (localStorage.getItem("lastTime") == undefined) {
   localStorage.setItem("lastTime", Date.now() - 8.1 * 60 * 60 * 1000);
 }
 let deltaSeconds = (Date.now() - localStorage.getItem("lastTime")) / 1000;
 // 距离上次主动切换日夜模式超过8h，根据当前时间自动调节日夜模式
-if (deltaSeconds > 60 * 60 * 8) {
+if (deltaSeconds > 60 * 60 * 8 && !autoNightOff) {
   // 24小时后再生效
   localStorage.setItem("lastTime", Date.now());
   var curHour = new Date().getHours();
   var curMode = document.getElementsByTagName('html')[0].getAttribute('data-theme');
-  // 是白天还是夜间：优先问 aside-calendar.js——它按访客当地真实日出日落算
-  // （source/js/aside-calendar.js 的 isDayNow），拿不到才退回原来的早7晚7。
-  // 它还会在解析期先把模式摆正，所以正常情况下下面两个分支根本不会进。
-  var isDayNow = (window.fomalAsideCalendar && typeof window.fomalAsideCalendar.isDayNow === 'function')
-    ? window.fomalAsideCalendar.isDayNow()
-    : (curHour >= 7 && curHour < 19);
+  // 是白天还是夜间：优先问 /js/inject/daynight-boot.js —— 它每页都在，按访客当地真实日出日落算
+  // （window.fomalDayNight.isDayNow）；老路径再问首页那张日历卡（fomalAsideCalendar），最后才退回早7晚7。
+  // 它们都会在解析期先把模式摆正，所以正常情况下下面两个分支根本不会进。
+  var isDayNow = (window.fomalDayNight && typeof window.fomalDayNight.isDayNow === 'function')
+    ? window.fomalDayNight.isDayNow()
+    : (window.fomalAsideCalendar && typeof window.fomalAsideCalendar.isDayNow === 'function')
+      ? window.fomalAsideCalendar.isDayNow()
+      : (curHour >= 7 && curHour < 19);
   // 模式不正确
   if (!isDayNow && curMode != "dark") {
     activateDarkMode();
@@ -684,7 +690,10 @@ if (deltaSeconds > 60 * 60 * 8) {
   } else if (isDayNow && curMode != "light") {
     activateLightMode();
     saveToLocal.set('theme', 'light', 2);
-    document.querySelector('body').classList.add('DarkMode'), document.getElementById('modeicon').setAttribute('xlink:href', '#icon-moon');
+    // 切到白天：body.DarkMode 要摘掉（原来这里写的是 add，类与页面状态正好相反 ——
+    // shell.js 的日转过场与月亮按钮样式都读这个类）
+    document.querySelector('body').classList.remove('DarkMode');
+    document.getElementById('modeicon').setAttribute('xlink:href', '#icon-moon');
   }
 }
 
