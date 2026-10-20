@@ -2,5 +2,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://example.com/sitemap.xml
-Sitemap: https://example.com/baidusitemap.xml
+Sitemap: https://171031.me/sitemap.xml
+Sitemap: https://171031.me/baidusitemap.xml

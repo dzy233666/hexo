@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Demo
+title: "此刻"
 subtitle:
-description: "一个基于 Hexo + Fomalhaut 主题的演示站点"
+description: "累了就休息"
 keywords: "Hexo,Butterfly,Fomalhaut,博客,主题,卡片式UI"
-author: Demo
+author: "此刻"
 language: zh-CN
-timezone: ""
+timezone: Asia/Shanghai
 
 # abbrlink config
 abbrlink:
@@ -18,7 +18,7 @@ abbrlink:
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://example.com/
+url: https://171031.me/
 permalink: posts/:abbrlink.html
 permalink_defaults:
 pretty_urls:

@@ -926,8 +926,7 @@ subtitle:
   source: false
   # 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字
   sub:
-    - "Welcome to DemoのTiny Home!🤣🤣🤣"
-    - "Hope you have a nice day!🍭🍭🍭"
+    - "累了就休息"
 
 # Loading Animation (加載動畫)
 # preloader: false
@@ -1562,7 +1561,7 @@ lantern:
 # 注意：本文件已被 git 跟踪，Key 写在这里会进仓库 —— 建议把 Key 单独放到
 #       站点根目录的 .ai-chat-key（已加进 .gitignore），下面 api_key 留空即可。
 ai_chat:
-  enable: true                 # 总开关：false 则不注入按钮和面板
+  enable: false                 # 总开关：false 则不注入按钮和面板
   api_base: https://api.deepseek.com
   api_key: ''                  # 直接写 Key（不推荐，会进 git）
   api_key_file: .ai-chat-key   # 或从文件读；相对站点根目录
