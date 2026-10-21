@@ -697,7 +697,7 @@ crisp:
 footer:
   owner:
     enable: true
-    since: 2022
+    since: 2026
   custom_text:
   copyright: false # Copyright of theme and framework
 
@@ -1018,7 +1018,7 @@ busuanzi:
 # Formal: Month/Day/Year Time or Year/Month/Day Time
 runtimeshow:
   enable: false
-  publish_date: 8/9/2022 00:00:00
+  publish_date: 10/21/2026 00:00:00
 
 # Aside widget - Newest Comments
 newest_comments:

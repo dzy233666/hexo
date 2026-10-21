@@ -23,7 +23,7 @@
 var now1 = new Date();
 
 function createtime1() {
-  var grt = new Date("08/09/2022 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  var grt = new Date("10/21/2026 00:00:00"); //此处修改你的建站时间或者网站上线时间
   now1.setTime(now1.getTime() + 250);
   var days = (now1 - grt) / 1000 / 60 / 60 / 24;
   var dnum = Math.floor(days);
@@ -43,9 +43,9 @@ function createtime1() {
     "小站已经苟活",
     dnum,
     "天啦!",
-    // 版权年份跟着走：2022 是建站年（与 _config.fomalhaut.yml 的 footer.owner.since 保持一致），
+    // 版权年份跟着走：2026 是建站年（与 _config.fomalhaut.yml 的 footer.owner.since 保持一致），
     // 结束年份取运行时的当前年份，省得每年手改一次。
-    "©2022-" + new Date().getFullYear() + " By Demo",
+    "©2026-" + new Date().getFullYear() + " By Demo",
   ];
 
   setTimeout(
