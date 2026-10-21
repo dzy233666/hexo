@@ -114,7 +114,7 @@
 /* ---------------------------------------------------------------- 顶部字标 */
 /* 主题没有「站点名」这个节点，用伪元素补一行 masthead；★ 改站名记得改这里 */
 #sidebar #sidebar-menus::before {
-  content: "Demo";
+  content: "此刻";
   display: block;
   padding: 20px 24px 0;
   text-align: center;

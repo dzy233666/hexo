@@ -238,7 +238,7 @@ type: "link"
 {% tabs link %}
 <!-- tab 🙋 butterfly-💭candy -->
 ```yml
-    - name: Demo
+    - name: 此刻
       link: https://example.com/
       avatar: https://picsum.photos/id/1016/1200/675
       descr: Future is now 🍭🍭🍭
@@ -249,12 +249,12 @@ type: "link"
 <!-- tab 🥗Volantis -->
 ```JSON
 {
-  "title": "Demo",
+  "title": "此刻",
   "screenshot": "https://picsum.photos/id/1039/800/450",
   "url": "https://example.com/",
   "avatar": "https://picsum.photos/id/1016/1200/675",
   "description": "Future is now 🍭🍭🍭",
-  "keywords": "Demo"
+  "keywords": "此刻"
 }
 ```
 <!-- endtab -->
@@ -263,12 +263,12 @@ type: "link"
 
 | 名称       | 数值                                                         |
 | ---------- | ------------------------------------------------------------ |
-| 站点名称   | Demo                                                   |
+| 站点名称   | 此刻                                                   |
 | 站点截图   | https://picsum.photos/id/1039/800/450 |
 | 站点链接   | https://example.com/                                        |
 | 站长头像   | https://picsum.photos/id/1016/1200/675                         |
 | 站点描述   | Future is now🍭🍭🍭                         |
-| 站点关键词 | Demo,个人博客,代码                                     |
+| 站点关键词 | 此刻,个人博客,代码                                     |
 
 <!-- endtab -->
 {% endtabs %}
