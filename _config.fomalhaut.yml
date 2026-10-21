@@ -541,8 +541,9 @@ addtoany:
 comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42
-  use:
-    - Twikoo # Valine,Disqus,...
+  # 2026-10-21 暂时关闭评论：原 Twikoo 的 envId 是模板占位符 comment.example.com（域名不存在），
+  # 会导致前端报「请求被跨域策略拦截 status 0」。等接入 Giscus 后把 use 改回 [Giscus] 即可。
+  use: []
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
