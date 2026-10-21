@@ -795,13 +795,13 @@ tag_ui: # 留空或 index
 # "#e4f4f6" "#efefef"
 background:
   #【必选】默认背景 url(https://picsum.photos/id/1015/1920/1080)
-  default: var(--default-bg)
+  default: url(/assets/bg-violet.webp)
   #【可选】PC端夜间模式背景 url(https://picsum.photos/id/1044/1920/1080)
-  darkmode: var(--darkmode-bg)
+  darkmode: url(/assets/bg-violet.webp)
   #【可选】移动端日间默认背景 url(https://picsum.photos/id/1018/1920/1080)
-  mobileday: var(--mobileday-bg)
+  mobileday: url(/assets/bg-violet.webp)
   #【可选】移动端夜间模式背景 url(https://picsum.photos/id/1039/1920/1080)
-  mobilenight: var(--mobilenight-bg)
+  mobilenight: url(/assets/bg-violet.webp)
 
 # Footer Background
 footer_bg: false
