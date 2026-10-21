@@ -956,7 +956,7 @@ aside:
       enable: true
       icon: # fab fa-github
       text: Github主页
-      link: https://github.com/yourname
+      link: https://github.com/dzy233666
   card_announcement:
     enable: true
     content: |

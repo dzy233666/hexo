@@ -82,7 +82,7 @@ description: 网站访客统计看板：51LA 实时访客数据、GitHub 贡献�
 <div class="census-note">
 <span>📈 访客数据：<a href="https://v6.51.la/" target="_blank" rel="noopener">51LA</a></span>
 <span>🌏 地域 / 趋势 / 来源：<a href="https://tongji.baidu.com/" target="_blank" rel="noopener">百度统计</a></span>
-<span>📊 贡献日历：<a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a></span>
+<span>📊 贡献日历：<a href="https://github.com/dzy233666" target="_blank" rel="noopener">GitHub</a></span>
 </div>
 </div>
 
