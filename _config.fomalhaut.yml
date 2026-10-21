@@ -799,9 +799,9 @@ background:
   #【可选】PC端夜间模式背景 url(https://picsum.photos/id/1044/1920/1080)
   darkmode: url(/assets/bg-violet.webp)
   #【可选】移动端日间默认背景 url(https://picsum.photos/id/1018/1920/1080)
-  mobileday: url(/assets/bg-violet.webp)
+  mobileday: url(/assets/bg-violet-mobile.webp)
   #【可选】移动端夜间模式背景 url(https://picsum.photos/id/1039/1920/1080)
-  mobilenight: url(/assets/bg-violet.webp)
+  mobilenight: url(/assets/bg-violet-mobile.webp)
 
 # Footer Background
 footer_bg: false
