@@ -541,9 +541,9 @@ addtoany:
 comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42
-  # 2026-10-21 暂时关闭评论：原 Twikoo 的 envId 是模板占位符 comment.example.com（域名不存在），
-  # 会导致前端报「请求被跨域策略拦截 status 0」。等接入 Giscus 后把 use 改回 [Giscus] 即可。
-  use: []
+  # 2026-10-21 原 Twikoo 的 envId 是占位符 comment.example.com（域名不存在），前端报「跨域拦截 status 0」，已弃用。
+  # 2026-10-22 改用 Giscus：评论存在 GitHub Discussions 里，不需要任何后端/数据库。
+  use: [Giscus]
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -638,13 +638,15 @@ twikoo:
 # Giscus
 # https://giscus.app/
 giscus:
-  repo:
-  repo_id:
-  category_id:
+  repo: dzy233666/hexo
+  repo_id: R_kgDOVQ8nYg
+  category_id: DIC_kwDOVQ8nYs4DJQs0
   theme:
     light: light
     dark: dark
   option:
+    mapping: pathname
+    lang: zh-CN
 
 # Remark42
 # https://remark42.com/docs/configuration/frontend/
