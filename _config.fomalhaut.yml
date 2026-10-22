@@ -21,6 +21,9 @@ menu:
     网站统计: /site/census/ || icon--tongjibiao || faa-tada
     旧时光: /site/time/ || icon-xianxingshalou || faa-tada
     关于: /personal/about/ || icon-paperplane || faa-tada
+  番剧 || icon-dianshiji || faa-tada || hide:
+    本季新番表: /box/bangumi/ || icon-guidang1 || faa-tada
+    追番清单: /box/bangumi/watching/ || icon-dianying1 || faa-tada
 
 # Code Blocks (代碼相關)
 # --------------------------------------
