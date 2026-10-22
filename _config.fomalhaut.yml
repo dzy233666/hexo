@@ -645,8 +645,11 @@ giscus:
     light: light
     dark: dark
   option:
-    mapping: pathname
-    lang: zh-CN
+    # 主题会把这里的键原样拼进 giscus 的配置对象再 setAttribute，
+    # 所以要带上 data- 前缀才生效（写 mapping/lang 会变成无效属性，界面仍是英文）。
+    data-lang: zh-CN
+    data-input-position: top
+    data-strict: "0"
 
 # Remark42
 # https://remark42.com/docs/configuration/frontend/
@@ -1200,7 +1203,8 @@ inject:
     # Twikoo 评论美化（站点独立样式，不改主题源码）：表单/列表/交互统一到主题色与卡片语言。
     # 源文件 source/css/twikoo.css；只写 Twikoo 2.x 的 .tk-* 类名，配色派生自 --theme-color。
     # 回滚：删掉这一行即可（备份 bak/announcement-20261004-twikoo-ui/before/_config.fomalhaut.yml）。
-    - <link rel="stylesheet" href="/css/twikoo.css?v=20261018-owo">
+    # 2026-10-22 评论系统已换成 Giscus，这里不再需要加载 Twikoo 样式（每页少一个请求）。
+    # - <link rel="stylesheet" href="/css/twikoo.css?v=20261018-owo">
     # 已移除 Element-UI CSS（236KB，head 同步阻塞）：全站仅 fomal.js 的 15 处 $notify 用到，已改由 /js/notify.js 承担
     # - <link rel="stylesheet" href="https://registry.npmmirror.com/element-ui/2.15.7/files/lib/theme-chalk/index.css"> # 引入组件库
     # 综合美化模块样式引入
