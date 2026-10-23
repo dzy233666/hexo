@@ -1,13 +1,13 @@
 /**
- * 本季新番表渲染（数据来自 AniList，见 tools/fetch-anilist.js）
+ * 本季新番表渲染（数据来自 Bangumi 每日放送，见 tools/fetch-bangumi-season.js）
  *
  * 数据文件：/anime/season.json
- *   season: { season, seasonCN, year, label }
- *   items[]: { id, title, romaji, cover, episodes, score, format, studio,
- *              nextEpisode, airingAt, weekday, weekdayIndex, dateText, timeText, siteUrl }
+ *   season: { label, source }
+ *   items[]: { id, name, nameCN, airDate, weekdayIndex(0=周日), weekday,
+ *              score, rank, ratingTotal, doing, url, img, localCover }
  *
- * 时间均为北京时间（由抓取脚本换算好写进数据里）。
- * 追番清单不在这里，见 anime-bangumi.js（数据来自 Bangumi）。
+ * 与追番清单保持一致：中文名优先、封面本地化、卡片链接到 Bangumi。
+ * Bangumi 的每日放送只有「周几 + 首播日期」，没有具体时刻，所以卡片不显示 N 话/时间。
  */
 (function () {
   'use strict';
@@ -23,27 +23,38 @@
   }
 
   function cardHTML(item) {
+    var title = item.nameCN || item.name || item.title || '';
+    var sub = item.name && item.nameCN && item.name !== item.nameCN ? item.name : '';
+    var cover = item.localCover || item.img || item.cover || '';
+    var link = item.url || item.siteUrl || '#';
+
     var meta = [];
-    if (item.nextEpisode) meta.push('<span class="anime-ep">第 ' + item.nextEpisode + ' 话</span>');
-    if (item.dateText) meta.push('<span class="anime-time">' + esc(item.dateText) + ' ' + esc(item.timeText) + '</span>');
-    var score = item.score ? '<span class="anime-score">' + item.score + '</span>' : '';
-    var studio = item.studio ? '<span class="anime-studio">' + esc(item.studio) + '</span>' : '';
+    if (item.airDate) meta.push('<span class="anime-time">首播 ' + esc(String(item.airDate).slice(5)) + '</span>');
+    if (item.doing) meta.push('<span>' + item.doing + ' 人在追</span>');
+    if (item.rank) meta.push('<span>#' + item.rank + '</span>');
 
     return '' +
       '<article class="anime-card">' +
-        '<a class="anime-cover" href="' + esc(item.siteUrl) + '" target="_blank" rel="noopener nofollow">' +
-          (item.cover
-            ? '<img loading="lazy" src="' + esc(item.cover) + '" alt="' + esc(item.title) + '">'
+        '<a class="anime-cover" href="' + esc(link) + '" target="_blank" rel="noopener nofollow">' +
+          (cover
+            ? '<img loading="lazy" src="' + esc(cover) + '" alt="' + esc(title) + '">'
             : '<span class="anime-cover-fallback"></span>') +
-          score +
+          (item.score ? '<span class="anime-score">' + item.score + '</span>' : '') +
         '</a>' +
         '<div class="anime-body">' +
-          '<a class="anime-title" href="' + esc(item.siteUrl) + '" target="_blank" rel="noopener nofollow">' + esc(item.title) + '</a>' +
-          (item.romaji ? '<div class="anime-romaji">' + esc(item.romaji) + '</div>' : '') +
+          '<a class="anime-title" href="' + esc(link) + '" target="_blank" rel="noopener nofollow">' + esc(title) + '</a>' +
+          (sub ? '<div class="anime-romaji">' + esc(sub) + '</div>' : '') +
           '<div class="anime-meta">' + meta.join('') + '</div>' +
-          '<div class="anime-foot">' + studio + '</div>' +
         '</div>' +
       '</article>';
+  }
+
+  function section(title, list) {
+    if (!list.length) return '';
+    return '<section class="anime-day"><h3 class="anime-day-title">' + esc(title) +
+      '<span class="anime-day-num">' + list.length + '</span></h3><div class="anime-grid">' +
+      list.map(cardHTML).join('') +
+      '</div></section>';
   }
 
   function renderSeason(root) {
@@ -59,38 +70,31 @@
         var items = (data.items || []).slice();
         var groups = {};
         items.forEach(function (it) {
-          var k = typeof it.weekdayIndex === 'number' ? String(it.weekdayIndex) : '-1';
+          var k = typeof it.weekdayIndex === 'number' && it.weekdayIndex >= 0 ? String(it.weekdayIndex) : '-1';
           (groups[k] = groups[k] || []).push(it);
         });
 
         var html = '<div class="anime-head">' +
-          '<span class="anime-season-label">' + esc((data.season && data.season.label) || '') + '</span>' +
+          '<span class="anime-season-label">' + esc((data.season && data.season.label) || '本季新番') + '</span>' +
           '<span class="anime-count">共 ' + (data.total || items.length) + ' 部</span>' +
           '<span class="anime-updated">数据更新：' + esc(String(data.generatedAt || '').slice(0, 10)) + '</span>' +
           '</div>' +
-          '<p class="anime-hint">时间均为北京时间。想看完整追番记录？去 <a href="/box/bangumi/watching/">追番清单</a>。</p>';
+          '<p class="anime-hint">按放送星期分组，评分为 Bangumi 用户均分。想看我的追番记录？去 ' +
+          '<a href="/box/bangumi/watching/">追番清单</a>。</p>';
 
         // weekdayIndex: 1..6 周一到周六，0 周日
         var order = ['1', '2', '3', '4', '5', '6', '0'];
         order.forEach(function (key, i) {
           var list = groups[key] || [];
           if (!list.length) return;
-          html += '<section class="anime-day"><h3 class="anime-day-title">' + WEEKDAYS[i] +
-            '<span class="anime-day-num">' + list.length + '</span></h3><div class="anime-grid">' +
-            list.map(cardHTML).join('') +
-            '</div></section>';
+          html += section(WEEKDAYS[i], list);
         });
 
         var rest = groups['-1'] || [];
-        if (rest.length) {
-          html += '<section class="anime-day"><h3 class="anime-day-title">已完结 / 待定档' +
-            '<span class="anime-day-num">' + rest.length + '</span></h3><div class="anime-grid">' +
-            rest.map(cardHTML).join('') +
-            '</div></section>';
-        }
+        if (rest.length) html += section('放送日未定', rest);
 
-        html += '<p class="anime-source">数据来源：<a href="https://anilist.co" target="_blank" rel="noopener nofollow">AniList</a>，' +
-          '本站仅展示标题、封面与放送时间，观看请支持正版。</p>';
+        html += '<p class="anime-source">数据来源：<a href="https://bgm.tv" target="_blank" rel="noopener nofollow">Bangumi 番组计划</a>' +
+          '（每日放送），由 <code>tools/fetch-bangumi-season.js</code> 抓取后随站点发布；封面已本地化，构建过程不联网。</p>';
 
         root.innerHTML = html;
         root.setAttribute('data-ready', '1');
