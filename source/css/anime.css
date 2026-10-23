@@ -304,4 +304,87 @@
   .anime-updated {
     display: none;
   }
+
+  .anime-toolbar {
+    flex-wrap: wrap;
+  }
+
+  .anime-search {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   追番清单（Bangumi）：搜索框、我的评分、短评
+   ========================================================================== */
+
+.anime-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0 14px;
+}
+
+.anime-search {
+  flex: 1 1 180px;
+  min-width: 0;
+  padding: 7px 12px;
+  font-size: 0.86em;
+  color: var(--anime-text);
+  background: var(--anime-card-bg);
+  border: 1px solid var(--anime-card-border);
+  border-radius: 999px;
+  outline: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.anime-search:focus {
+  border-color: var(--theme-color, #49b1f5);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--theme-color, #49b1f5) 15%, transparent);
+}
+
+.anime-user-link {
+  flex: 0 0 auto;
+  font-size: 0.78em;
+  color: var(--anime-text-dim);
+  white-space: nowrap;
+}
+
+.anime-user-link:hover {
+  color: var(--theme-color, #49b1f5);
+}
+
+/* 我的评分（星 + 数字） */
+.anime-rate {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 2px;
+  font-size: 0.74em;
+  color: #f5a623;
+}
+
+[data-theme='dark'] .anime-rate {
+  color: #ffb84d;
+}
+
+.anime-stars {
+  letter-spacing: 1px;
+}
+
+.anime-rate-num {
+  font-weight: 700;
+  color: var(--anime-text-dim);
+}
+
+/* 短评 */
+.anime-comment {
+  margin: 4px 0 0;
+  font-size: 0.74em;
+  line-height: 1.5;
+  color: var(--anime-text-dim);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

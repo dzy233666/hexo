@@ -1,0 +1,99 @@
+{
+  "generatedAt": "2026-10-23T07:20:02.786Z",
+  "user": {
+    "id": "1044188",
+    "name": "吹响吧",
+    "url": "https://bgm.tv/user/1044188"
+  },
+  "counts": {
+    "doing": 2,
+    "collect": 2
+  },
+  "source": "Bangumi API v0 (/v0/users/{id}/collections)",
+  "items": [
+    {
+      "id": 118335,
+      "name": "進撃の巨人 Season 2",
+      "nameCN": "进击的巨人 第二季",
+      "date": "2017-04-01",
+      "eps": 12,
+      "score": 8.1,
+      "rank": 158,
+      "img": "https://lain.bgm.tv/pic/cover/l/0e/ca/212293_J3Bv5.jpg",
+      "url": "https://bgm.tv/subject/118335",
+      "status": "doing",
+      "statusLabel": "在看",
+      "myRate": 0,
+      "comment": "",
+      "tags": [],
+      "epStatus": 0,
+      "updatedAt": "2025-07-20T13:39:11+08:00",
+      "year": "2025",
+      "localCover": "/anime/covers/118335.jpg"
+    },
+    {
+      "id": 55770,
+      "name": "進撃の巨人",
+      "nameCN": "进击的巨人",
+      "date": "2013-04-06",
+      "eps": 25,
+      "score": 8.2,
+      "rank": 115,
+      "img": "https://lain.bgm.tv/pic/cover/l/78/c9/55770_HsJfh.jpg",
+      "url": "https://bgm.tv/subject/55770",
+      "status": "doing",
+      "statusLabel": "在看",
+      "myRate": 0,
+      "comment": "",
+      "tags": [],
+      "epStatus": 10,
+      "updatedAt": "2025-07-06T18:20:44+08:00",
+      "year": "2025",
+      "localCover": "/anime/covers/55770.jpg"
+    },
+    {
+      "id": 115908,
+      "name": "響け！ユーフォニアム",
+      "nameCN": "吹响吧！上低音号",
+      "date": "2015-04-07",
+      "eps": 14,
+      "score": 8.3,
+      "rank": 96,
+      "img": "https://lain.bgm.tv/pic/cover/l/37/df/115908_c0uQj.jpg",
+      "url": "https://bgm.tv/subject/115908",
+      "status": "collect",
+      "statusLabel": "看过",
+      "myRate": 10,
+      "comment": "好看",
+      "tags": [
+        "京阿尼"
+      ],
+      "epStatus": 0,
+      "updatedAt": "2026-10-23T15:06:16+08:00",
+      "year": "2026",
+      "localCover": "/anime/covers/115908.jpg"
+    },
+    {
+      "id": 152091,
+      "name": "響け！ユーフォニアム2",
+      "nameCN": "吹响吧！上低音号 第二季",
+      "date": "2016-10-05",
+      "eps": 13,
+      "score": 8.5,
+      "rank": 51,
+      "img": "https://lain.bgm.tv/pic/cover/l/69/28/152091_Bg7Hc.jpg",
+      "url": "https://bgm.tv/subject/152091",
+      "status": "collect",
+      "statusLabel": "看过",
+      "myRate": 10,
+      "comment": "好看",
+      "tags": [
+        "京阿尼"
+      ],
+      "epStatus": 0,
+      "updatedAt": "2026-10-23T15:06:02+08:00",
+      "year": "2026",
+      "localCover": "/anime/covers/152091.jpg"
+    }
+  ]
+}
