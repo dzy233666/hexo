@@ -65,15 +65,23 @@ async function getJSON(url) {
   return res.json();
 }
 
-/** 下载一张封面；已存在就跳过，返回相对站点的路径 */
+/** 借助 Bangumi 的 /r/{宽}/ 缩放接口把原图压到卡片够用的尺寸（约 600px、26KB） */
+function sizedUrl(url) {
+  const u = String(url || '').replace(/^http:\/\//, 'https://');
+  if (!/lain\.bgm\.tv\/pic\//.test(u)) return u;
+  return u.replace('lain.bgm.tv/pic/', 'lain.bgm.tv/r/600/pic/');
+}
+
+/** 下载一张封面；已存在就跳过（BGM_FORCE_COVER=1 可强制重下），返回相对站点的路径 */
 async function downloadCover(subjectId, coverUrl) {
   const file = path.join(COVER_DIR, `${subjectId}.jpg`);
-  if (fs.existsSync(file) && fs.statSync(file).size > 1024) {
+  const force = process.env.BGM_FORCE_COVER === '1';
+  if (!force && fs.existsSync(file) && fs.statSync(file).size > 1024) {
     return `/anime/covers/${subjectId}.jpg`;
   }
   if (!coverUrl) return '';
   try {
-    const res = await fetch(coverUrl, { headers: { 'User-Agent': UA } });
+    const res = await fetch(sizedUrl(coverUrl), { headers: { 'User-Agent': UA } });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const buf = Buffer.from(await res.arrayBuffer());
     if (buf.length < 1024) throw new Error('文件过小，可能是错误页');

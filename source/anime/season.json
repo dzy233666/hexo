@@ -3,7 +3,7 @@
     "label": "2026 年秋季新番",
     "source": "bangumi"
   },
-  "generatedAt": "2026-10-23T07:37:02.583Z",
+  "generatedAt": "2026-10-23T07:44:05.202Z",
   "total": 110,
   "source": "Bangumi API v0 (/calendar 每日放送)",
   "items": [
@@ -19,7 +19,7 @@
       "ratingTotal": 83,
       "doing": 684,
       "url": "https://bgm.tv/subject/623249",
-      "img": "https://lain.bgm.tv/pic/cover/s/0f/0f/623249_zCdly.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/0f/0f/623249_zCdly.jpg",
       "localCover": "/anime/covers/623249.jpg"
     },
     {
@@ -34,7 +34,7 @@
       "ratingTotal": 154,
       "doing": 1109,
       "url": "https://bgm.tv/subject/555605",
-      "img": "https://lain.bgm.tv/pic/cover/s/67/5a/555605_cLCw5.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/67/5a/555605_cLCw5.jpg",
       "localCover": "/anime/covers/555605.jpg"
     },
     {
@@ -49,7 +49,7 @@
       "ratingTotal": 78,
       "doing": 499,
       "url": "https://bgm.tv/subject/634210",
-      "img": "https://lain.bgm.tv/pic/cover/s/44/ed/634210_O7aNK.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/44/ed/634210_O7aNK.jpg",
       "localCover": "/anime/covers/634210.jpg"
     },
     {
@@ -64,8 +64,8 @@
       "ratingTotal": 332,
       "doing": 3243,
       "url": "https://bgm.tv/subject/630160",
-      "img": "https://lain.bgm.tv/pic/cover/s/9e/b5/630160_tL25y.jpg",
-      "localCover": ""
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/9e/b5/630160_tL25y.jpg",
+      "localCover": "/anime/covers/630160.jpg"
     },
     {
       "id": 548156,
@@ -79,7 +79,7 @@
       "ratingTotal": 299,
       "doing": 2181,
       "url": "https://bgm.tv/subject/548156",
-      "img": "https://lain.bgm.tv/pic/cover/s/f1/6c/548156_L3fC6.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/f1/6c/548156_L3fC6.jpg",
       "localCover": "/anime/covers/548156.jpg"
     },
     {
@@ -94,7 +94,7 @@
       "ratingTotal": 7,
       "doing": 126,
       "url": "https://bgm.tv/subject/664395",
-      "img": "https://lain.bgm.tv/pic/cover/s/61/d5/664395_diPLi.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/61/d5/664395_diPLi.jpg",
       "localCover": "/anime/covers/664395.jpg"
     },
     {
@@ -109,7 +109,7 @@
       "ratingTotal": 6,
       "doing": 17,
       "url": "https://bgm.tv/subject/688797",
-      "img": "https://lain.bgm.tv/pic/cover/s/14/2d/688797_z3waa.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/14/2d/688797_z3waa.jpg",
       "localCover": "/anime/covers/688797.jpg"
     },
     {
@@ -124,7 +124,7 @@
       "ratingTotal": 218,
       "doing": 1289,
       "url": "https://bgm.tv/subject/636023",
-      "img": "https://lain.bgm.tv/pic/cover/s/94/c9/636023_iF8j7.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/94/c9/636023_iF8j7.jpg",
       "localCover": "/anime/covers/636023.jpg"
     },
     {
@@ -139,8 +139,8 @@
       "ratingTotal": 8,
       "doing": 69,
       "url": "https://bgm.tv/subject/712000",
-      "img": "https://lain.bgm.tv/pic/cover/s/da/c8/712000_Z5S1J.jpg",
-      "localCover": ""
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/da/c8/712000_Z5S1J.jpg",
+      "localCover": "/anime/covers/712000.jpg"
     },
     {
       "id": 632817,
@@ -154,7 +154,7 @@
       "ratingTotal": 1,
       "doing": 1,
       "url": "https://bgm.tv/subject/632817",
-      "img": "https://lain.bgm.tv/pic/cover/s/3e/4b/632817_iiHlp.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/3e/4b/632817_iiHlp.jpg",
       "localCover": "/anime/covers/632817.jpg"
     },
     {
@@ -169,7 +169,7 @@
       "ratingTotal": 48,
       "doing": 475,
       "url": "https://bgm.tv/subject/664389",
-      "img": "https://lain.bgm.tv/pic/cover/s/95/5d/664389_zP36V.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/95/5d/664389_zP36V.jpg",
       "localCover": "/anime/covers/664389.jpg"
     },
     {
@@ -184,7 +184,7 @@
       "ratingTotal": 55,
       "doing": 278,
       "url": "https://bgm.tv/subject/605533",
-      "img": "https://lain.bgm.tv/pic/cover/s/d1/e7/605533_97NSn.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/d1/e7/605533_97NSn.jpg",
       "localCover": "/anime/covers/605533.jpg"
     },
     {
@@ -199,7 +199,7 @@
       "ratingTotal": 181,
       "doing": 1306,
       "url": "https://bgm.tv/subject/536270",
-      "img": "https://lain.bgm.tv/pic/cover/s/3e/fc/536270_51P45.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/3e/fc/536270_51P45.jpg",
       "localCover": "/anime/covers/536270.jpg"
     },
     {
@@ -214,7 +214,7 @@
       "ratingTotal": 6,
       "doing": 33,
       "url": "https://bgm.tv/subject/638081",
-      "img": "https://lain.bgm.tv/pic/cover/s/49/6a/638081_tc7A0.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/49/6a/638081_tc7A0.jpg",
       "localCover": "/anime/covers/638081.jpg"
     },
     {
@@ -229,7 +229,7 @@
       "ratingTotal": 98,
       "doing": 868,
       "url": "https://bgm.tv/subject/621073",
-      "img": "https://lain.bgm.tv/pic/cover/s/ec/f9/621073_oFcZ3.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/ec/f9/621073_oFcZ3.jpg",
       "localCover": "/anime/covers/621073.jpg"
     },
     {
@@ -244,7 +244,7 @@
       "ratingTotal": 27,
       "doing": 178,
       "url": "https://bgm.tv/subject/589775",
-      "img": "https://lain.bgm.tv/pic/cover/s/5d/8c/589775_QZq4Z.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/5d/8c/589775_QZq4Z.jpg",
       "localCover": "/anime/covers/589775.jpg"
     },
     {
@@ -259,7 +259,7 @@
       "ratingTotal": 2,
       "doing": 84,
       "url": "https://bgm.tv/subject/551304",
-      "img": "https://lain.bgm.tv/pic/cover/s/ac/40/551304_FbmZ9.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/ac/40/551304_FbmZ9.jpg",
       "localCover": "/anime/covers/551304.jpg"
     },
     {
@@ -274,7 +274,7 @@
       "ratingTotal": 2,
       "doing": 5,
       "url": "https://bgm.tv/subject/661278",
-      "img": "https://lain.bgm.tv/pic/cover/s/e3/df/661278_g29RR.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/e3/df/661278_g29RR.jpg",
       "localCover": "/anime/covers/661278.jpg"
     },
     {
@@ -289,7 +289,7 @@
       "ratingTotal": 212,
       "doing": 1519,
       "url": "https://bgm.tv/subject/656083",
-      "img": "https://lain.bgm.tv/pic/cover/s/af/7e/656083_B22Yt.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/af/7e/656083_B22Yt.jpg",
       "localCover": "/anime/covers/656083.jpg"
     },
     {
@@ -304,7 +304,7 @@
       "ratingTotal": 43,
       "doing": 208,
       "url": "https://bgm.tv/subject/636058",
-      "img": "https://lain.bgm.tv/pic/cover/s/58/0c/636058_bDwNj.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/58/0c/636058_bDwNj.jpg",
       "localCover": "/anime/covers/636058.jpg"
     },
     {
@@ -319,7 +319,7 @@
       "ratingTotal": 72,
       "doing": 372,
       "url": "https://bgm.tv/subject/596771",
-      "img": "https://lain.bgm.tv/pic/cover/s/39/bd/596771_y75Tw.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/39/bd/596771_y75Tw.jpg",
       "localCover": "/anime/covers/596771.jpg"
     },
     {
@@ -334,7 +334,7 @@
       "ratingTotal": 165,
       "doing": 1221,
       "url": "https://bgm.tv/subject/647220",
-      "img": "https://lain.bgm.tv/pic/cover/s/24/df/647220_cZZjY.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/24/df/647220_cZZjY.jpg",
       "localCover": "/anime/covers/647220.jpg"
     },
     {
@@ -349,7 +349,7 @@
       "ratingTotal": 44,
       "doing": 355,
       "url": "https://bgm.tv/subject/698032",
-      "img": "https://lain.bgm.tv/pic/cover/s/00/50/698032_1UUWe.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/00/50/698032_1UUWe.jpg",
       "localCover": "/anime/covers/698032.jpg"
     },
     {
@@ -364,7 +364,7 @@
       "ratingTotal": 0,
       "doing": 11,
       "url": "https://bgm.tv/subject/708612",
-      "img": "https://lain.bgm.tv/pic/cover/s/9c/1d/708612_jks1j.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/9c/1d/708612_jks1j.jpg",
       "localCover": "/anime/covers/708612.jpg"
     },
     {
@@ -379,7 +379,7 @@
       "ratingTotal": 0,
       "doing": 7,
       "url": "https://bgm.tv/subject/635258",
-      "img": "https://lain.bgm.tv/pic/cover/s/df/29/635258_JqFf3.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/df/29/635258_JqFf3.jpg",
       "localCover": "/anime/covers/635258.jpg"
     },
     {
@@ -394,7 +394,7 @@
       "ratingTotal": 0,
       "doing": 1,
       "url": "https://bgm.tv/subject/646586",
-      "img": "https://lain.bgm.tv/pic/cover/s/b7/a4/646586_DcbJB.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/b7/a4/646586_DcbJB.jpg",
       "localCover": "/anime/covers/646586.jpg"
     },
     {
@@ -409,7 +409,7 @@
       "ratingTotal": 288,
       "doing": 1792,
       "url": "https://bgm.tv/subject/511936",
-      "img": "https://lain.bgm.tv/pic/cover/s/dc/f7/511936_XDkXO.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/dc/f7/511936_XDkXO.jpg",
       "localCover": "/anime/covers/511936.jpg"
     },
     {
@@ -424,7 +424,7 @@
       "ratingTotal": 13,
       "doing": 87,
       "url": "https://bgm.tv/subject/707667",
-      "img": "https://lain.bgm.tv/pic/cover/s/44/89/707667_JL0l8.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/44/89/707667_JL0l8.jpg",
       "localCover": "/anime/covers/707667.jpg"
     },
     {
@@ -439,7 +439,7 @@
       "ratingTotal": 289,
       "doing": 1909,
       "url": "https://bgm.tv/subject/624923",
-      "img": "https://lain.bgm.tv/pic/cover/s/73/99/624923_4u99L.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/73/99/624923_4u99L.jpg",
       "localCover": "/anime/covers/624923.jpg"
     },
     {
@@ -454,7 +454,7 @@
       "ratingTotal": 129,
       "doing": 1112,
       "url": "https://bgm.tv/subject/418229",
-      "img": "https://lain.bgm.tv/pic/cover/s/52/fe/418229_gcFij.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/52/fe/418229_gcFij.jpg",
       "localCover": "/anime/covers/418229.jpg"
     },
     {
@@ -469,7 +469,7 @@
       "ratingTotal": 1,
       "doing": 1,
       "url": "https://bgm.tv/subject/708080",
-      "img": "https://lain.bgm.tv/pic/cover/s/42/85/708080_kx2E6.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/42/85/708080_kx2E6.jpg",
       "localCover": "/anime/covers/708080.jpg"
     },
     {
@@ -484,7 +484,7 @@
       "ratingTotal": 103,
       "doing": 798,
       "url": "https://bgm.tv/subject/634587",
-      "img": "https://lain.bgm.tv/pic/cover/s/05/25/634587_8k4k7.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/05/25/634587_8k4k7.jpg",
       "localCover": "/anime/covers/634587.jpg"
     },
     {
@@ -499,7 +499,7 @@
       "ratingTotal": 58,
       "doing": 306,
       "url": "https://bgm.tv/subject/614640",
-      "img": "https://lain.bgm.tv/pic/cover/s/1b/1e/614640_ESMLl.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/1b/1e/614640_ESMLl.jpg",
       "localCover": "/anime/covers/614640.jpg"
     },
     {
@@ -514,7 +514,7 @@
       "ratingTotal": 1,
       "doing": 6,
       "url": "https://bgm.tv/subject/710874",
-      "img": "https://lain.bgm.tv/pic/cover/s/75/89/710874_99X5Q.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/75/89/710874_99X5Q.jpg",
       "localCover": "/anime/covers/710874.jpg"
     },
     {
@@ -529,7 +529,7 @@
       "ratingTotal": 8,
       "doing": 6,
       "url": "https://bgm.tv/subject/390200",
-      "img": "https://lain.bgm.tv/pic/cover/s/1c/b4/390200_Z9jPp.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/1c/b4/390200_Z9jPp.jpg",
       "localCover": "/anime/covers/390200.jpg"
     },
     {
@@ -544,7 +544,7 @@
       "ratingTotal": 1,
       "doing": 10,
       "url": "https://bgm.tv/subject/688204",
-      "img": "https://lain.bgm.tv/pic/cover/s/0b/d4/688204_mSshl.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/0b/d4/688204_mSshl.jpg",
       "localCover": "/anime/covers/688204.jpg"
     },
     {
@@ -559,7 +559,7 @@
       "ratingTotal": 0,
       "doing": 5,
       "url": "https://bgm.tv/subject/713219",
-      "img": "https://lain.bgm.tv/pic/cover/s/26/18/713219_TtQVj.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/26/18/713219_TtQVj.jpg",
       "localCover": "/anime/covers/713219.jpg"
     },
     {
@@ -589,7 +589,7 @@
       "ratingTotal": 0,
       "doing": 1,
       "url": "https://bgm.tv/subject/713654",
-      "img": "https://lain.bgm.tv/pic/cover/s/80/91/713654_mxUL7.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/80/91/713654_mxUL7.jpg",
       "localCover": "/anime/covers/713654.jpg"
     },
     {
@@ -604,7 +604,7 @@
       "ratingTotal": 577,
       "doing": 3953,
       "url": "https://bgm.tv/subject/624085",
-      "img": "https://lain.bgm.tv/pic/cover/s/c6/8d/624085_5dXDL.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/c6/8d/624085_5dXDL.jpg",
       "localCover": "/anime/covers/624085.jpg"
     },
     {
@@ -619,7 +619,7 @@
       "ratingTotal": 830,
       "doing": 4451,
       "url": "https://bgm.tv/subject/625799",
-      "img": "https://lain.bgm.tv/pic/cover/s/af/3a/625799_ycox6.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/af/3a/625799_ycox6.jpg",
       "localCover": "/anime/covers/625799.jpg"
     },
     {
@@ -634,7 +634,7 @@
       "ratingTotal": 176,
       "doing": 927,
       "url": "https://bgm.tv/subject/593565",
-      "img": "https://lain.bgm.tv/pic/cover/s/af/c1/593565_nno0j.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/af/c1/593565_nno0j.jpg",
       "localCover": "/anime/covers/593565.jpg"
     },
     {
@@ -649,7 +649,7 @@
       "ratingTotal": 3318,
       "doing": 4370,
       "url": "https://bgm.tv/subject/513878",
-      "img": "https://lain.bgm.tv/pic/cover/s/db/94/513878_5f77g.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/db/94/513878_5f77g.jpg",
       "localCover": "/anime/covers/513878.jpg"
     },
     {
@@ -664,7 +664,7 @@
       "ratingTotal": 106,
       "doing": 627,
       "url": "https://bgm.tv/subject/505550",
-      "img": "https://lain.bgm.tv/pic/cover/s/84/86/505550_OLQmz.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/84/86/505550_OLQmz.jpg",
       "localCover": "/anime/covers/505550.jpg"
     },
     {
@@ -679,7 +679,7 @@
       "ratingTotal": 216,
       "doing": 1290,
       "url": "https://bgm.tv/subject/634708",
-      "img": "https://lain.bgm.tv/pic/cover/s/39/84/634708_NnWAS.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/39/84/634708_NnWAS.jpg",
       "localCover": "/anime/covers/634708.jpg"
     },
     {
@@ -694,7 +694,7 @@
       "ratingTotal": 59,
       "doing": 364,
       "url": "https://bgm.tv/subject/541538",
-      "img": "https://lain.bgm.tv/pic/cover/s/ee/12/541538_LxzAg.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/ee/12/541538_LxzAg.jpg",
       "localCover": "/anime/covers/541538.jpg"
     },
     {
@@ -709,7 +709,7 @@
       "ratingTotal": 280,
       "doing": 1606,
       "url": "https://bgm.tv/subject/584847",
-      "img": "https://lain.bgm.tv/pic/cover/s/83/49/584847_5nM0F.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/83/49/584847_5nM0F.jpg",
       "localCover": "/anime/covers/584847.jpg"
     },
     {
@@ -724,7 +724,7 @@
       "ratingTotal": 25,
       "doing": 109,
       "url": "https://bgm.tv/subject/544378",
-      "img": "https://lain.bgm.tv/pic/cover/s/ec/af/544378_j3ouu.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/ec/af/544378_j3ouu.jpg",
       "localCover": "/anime/covers/544378.jpg"
     },
     {
@@ -739,7 +739,7 @@
       "ratingTotal": 0,
       "doing": 1,
       "url": "https://bgm.tv/subject/709326",
-      "img": "https://lain.bgm.tv/pic/cover/s/94/b5/709326_Fsz6K.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/94/b5/709326_Fsz6K.jpg",
       "localCover": "/anime/covers/709326.jpg"
     },
     {
@@ -754,7 +754,7 @@
       "ratingTotal": 0,
       "doing": 0,
       "url": "https://bgm.tv/subject/715233",
-      "img": "https://lain.bgm.tv/pic/cover/s/b1/5d/715233_E9Z2Z.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/b1/5d/715233_E9Z2Z.jpg",
       "localCover": "/anime/covers/715233.jpg"
     },
     {
@@ -769,7 +769,7 @@
       "ratingTotal": 14886,
       "doing": 16363,
       "url": "https://bgm.tv/subject/975",
-      "img": "https://lain.bgm.tv/pic/cover/s/92/97/975_GFGYI.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/92/97/975_GFGYI.jpg",
       "localCover": "/anime/covers/975.jpg"
     },
     {
@@ -784,7 +784,7 @@
       "ratingTotal": 181,
       "doing": 1530,
       "url": "https://bgm.tv/subject/412008",
-      "img": "https://lain.bgm.tv/pic/cover/s/ee/ed/412008_vuyt4.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/ee/ed/412008_vuyt4.jpg",
       "localCover": "/anime/covers/412008.jpg"
     },
     {
@@ -799,7 +799,7 @@
       "ratingTotal": 324,
       "doing": 2187,
       "url": "https://bgm.tv/subject/646154",
-      "img": "https://lain.bgm.tv/pic/cover/s/89/fc/646154_uQi81.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/89/fc/646154_uQi81.jpg",
       "localCover": "/anime/covers/646154.jpg"
     },
     {
@@ -814,8 +814,8 @@
       "ratingTotal": 50,
       "doing": 471,
       "url": "https://bgm.tv/subject/502123",
-      "img": "https://lain.bgm.tv/pic/cover/s/e1/6f/502123_IiVB6.jpg",
-      "localCover": "/anime/covers/502123.jpg"
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/e1/6f/502123_IiVB6.jpg",
+      "localCover": ""
     },
     {
       "id": 573707,
@@ -829,7 +829,7 @@
       "ratingTotal": 1,
       "doing": 29,
       "url": "https://bgm.tv/subject/573707",
-      "img": "https://lain.bgm.tv/pic/cover/s/37/37/573707_EjKKu.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/37/37/573707_EjKKu.jpg",
       "localCover": "/anime/covers/573707.jpg"
     },
     {
@@ -844,7 +844,7 @@
       "ratingTotal": 151,
       "doing": 1339,
       "url": "https://bgm.tv/subject/486456",
-      "img": "https://lain.bgm.tv/pic/cover/s/fc/aa/486456_XO5B0.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/fc/aa/486456_XO5B0.jpg",
       "localCover": "/anime/covers/486456.jpg"
     },
     {
@@ -859,7 +859,7 @@
       "ratingTotal": 131,
       "doing": 1075,
       "url": "https://bgm.tv/subject/393010",
-      "img": "https://lain.bgm.tv/pic/cover/s/65/61/393010_EIOi9.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/65/61/393010_EIOi9.jpg",
       "localCover": "/anime/covers/393010.jpg"
     },
     {
@@ -874,7 +874,7 @@
       "ratingTotal": 33,
       "doing": 415,
       "url": "https://bgm.tv/subject/471844",
-      "img": "https://lain.bgm.tv/pic/cover/s/1d/7c/471844_5G6H8.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/1d/7c/471844_5G6H8.jpg",
       "localCover": "/anime/covers/471844.jpg"
     },
     {
@@ -889,7 +889,7 @@
       "ratingTotal": 140,
       "doing": 770,
       "url": "https://bgm.tv/subject/657778",
-      "img": "https://lain.bgm.tv/pic/cover/s/3b/a5/657778_7HXP5.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/3b/a5/657778_7HXP5.jpg",
       "localCover": "/anime/covers/657778.jpg"
     },
     {
@@ -904,7 +904,7 @@
       "ratingTotal": 0,
       "doing": 3,
       "url": "https://bgm.tv/subject/665014",
-      "img": "https://lain.bgm.tv/pic/cover/s/74/5e/665014_YbeJ2.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/74/5e/665014_YbeJ2.jpg",
       "localCover": "/anime/covers/665014.jpg"
     },
     {
@@ -919,7 +919,7 @@
       "ratingTotal": 0,
       "doing": 3,
       "url": "https://bgm.tv/subject/701779",
-      "img": "https://lain.bgm.tv/pic/cover/s/78/a0/701779_0phov.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/78/a0/701779_0phov.jpg",
       "localCover": "/anime/covers/701779.jpg"
     },
     {
@@ -934,7 +934,7 @@
       "ratingTotal": 0,
       "doing": 2,
       "url": "https://bgm.tv/subject/712926",
-      "img": "https://lain.bgm.tv/pic/cover/s/f5/be/712926_i4vqi.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/f5/be/712926_i4vqi.jpg",
       "localCover": "/anime/covers/712926.jpg"
     },
     {
@@ -949,7 +949,7 @@
       "ratingTotal": 0,
       "doing": 1,
       "url": "https://bgm.tv/subject/709475",
-      "img": "https://lain.bgm.tv/pic/cover/s/6f/24/709475_zpW8A.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/6f/24/709475_zpW8A.jpg",
       "localCover": "/anime/covers/709475.jpg"
     },
     {
@@ -964,7 +964,7 @@
       "ratingTotal": 487,
       "doing": 2883,
       "url": "https://bgm.tv/subject/665390",
-      "img": "https://lain.bgm.tv/pic/cover/s/e4/41/665390_UCHPM.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/e4/41/665390_UCHPM.jpg",
       "localCover": "/anime/covers/665390.jpg"
     },
     {
@@ -979,7 +979,7 @@
       "ratingTotal": 3,
       "doing": 6,
       "url": "https://bgm.tv/subject/705980",
-      "img": "https://lain.bgm.tv/pic/cover/s/83/75/705980_zVjkX.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/83/75/705980_zVjkX.jpg",
       "localCover": "/anime/covers/705980.jpg"
     },
     {
@@ -994,7 +994,7 @@
       "ratingTotal": 1918,
       "doing": 12967,
       "url": "https://bgm.tv/subject/622288",
-      "img": "https://lain.bgm.tv/pic/cover/s/d3/99/622288_nmbC3.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/d3/99/622288_nmbC3.jpg",
       "localCover": "/anime/covers/622288.jpg"
     },
     {
@@ -1009,7 +1009,7 @@
       "ratingTotal": 6,
       "doing": 99,
       "url": "https://bgm.tv/subject/449346",
-      "img": "https://lain.bgm.tv/pic/cover/s/fc/d2/449346_0ql6W.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/fc/d2/449346_0ql6W.jpg",
       "localCover": "/anime/covers/449346.jpg"
     },
     {
@@ -1024,7 +1024,7 @@
       "ratingTotal": 1,
       "doing": 5,
       "url": "https://bgm.tv/subject/576783",
-      "img": "https://lain.bgm.tv/pic/cover/s/c8/1a/576783_f7d1l.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/c8/1a/576783_f7d1l.jpg",
       "localCover": "/anime/covers/576783.jpg"
     },
     {
@@ -1039,7 +1039,7 @@
       "ratingTotal": 55,
       "doing": 22,
       "url": "https://bgm.tv/subject/577237",
-      "img": "https://lain.bgm.tv/pic/cover/s/33/a4/577237_Cd0Cm.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/33/a4/577237_Cd0Cm.jpg",
       "localCover": "/anime/covers/577237.jpg"
     },
     {
@@ -1054,7 +1054,7 @@
       "ratingTotal": 202,
       "doing": 1361,
       "url": "https://bgm.tv/subject/590553",
-      "img": "https://lain.bgm.tv/pic/cover/s/b6/e8/590553_Xz5PO.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/b6/e8/590553_Xz5PO.jpg",
       "localCover": "/anime/covers/590553.jpg"
     },
     {
@@ -1069,7 +1069,7 @@
       "ratingTotal": 67,
       "doing": 601,
       "url": "https://bgm.tv/subject/654294",
-      "img": "https://lain.bgm.tv/pic/cover/s/ec/2f/654294_ckrD9.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/ec/2f/654294_ckrD9.jpg",
       "localCover": "/anime/covers/654294.jpg"
     },
     {
@@ -1084,7 +1084,7 @@
       "ratingTotal": 12,
       "doing": 78,
       "url": "https://bgm.tv/subject/650428",
-      "img": "https://lain.bgm.tv/pic/cover/s/77/63/650428_G3GgP.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/77/63/650428_G3GgP.jpg",
       "localCover": "/anime/covers/650428.jpg"
     },
     {
@@ -1099,7 +1099,7 @@
       "ratingTotal": 0,
       "doing": 5,
       "url": "https://bgm.tv/subject/700127",
-      "img": "https://lain.bgm.tv/pic/cover/s/e4/11/700127_gLl6x.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/e4/11/700127_gLl6x.jpg",
       "localCover": "/anime/covers/700127.jpg"
     },
     {
@@ -1114,7 +1114,7 @@
       "ratingTotal": 0,
       "doing": 2,
       "url": "https://bgm.tv/subject/704737",
-      "img": "https://lain.bgm.tv/pic/cover/s/7d/06/704737_iWzS7.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/7d/06/704737_iWzS7.jpg",
       "localCover": "/anime/covers/704737.jpg"
     },
     {
@@ -1129,7 +1129,7 @@
       "ratingTotal": 1,
       "doing": 20,
       "url": "https://bgm.tv/subject/632061",
-      "img": "https://lain.bgm.tv/pic/cover/s/93/3c/632061_9qy7P.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/93/3c/632061_9qy7P.jpg",
       "localCover": "/anime/covers/632061.jpg"
     },
     {
@@ -1144,7 +1144,7 @@
       "ratingTotal": 4,
       "doing": 133,
       "url": "https://bgm.tv/subject/593863",
-      "img": "https://lain.bgm.tv/pic/cover/s/86/cd/593863_7u0XX.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/86/cd/593863_7u0XX.jpg",
       "localCover": "/anime/covers/593863.jpg"
     },
     {
@@ -1159,8 +1159,8 @@
       "ratingTotal": 544,
       "doing": 4831,
       "url": "https://bgm.tv/subject/568244",
-      "img": "https://lain.bgm.tv/pic/cover/s/55/e2/568244_e64dA.jpg",
-      "localCover": "/anime/covers/568244.jpg"
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/55/e2/568244_e64dA.jpg",
+      "localCover": ""
     },
     {
       "id": 537738,
@@ -1174,7 +1174,7 @@
       "ratingTotal": 472,
       "doing": 4410,
       "url": "https://bgm.tv/subject/537738",
-      "img": "https://lain.bgm.tv/pic/cover/s/1c/9b/537738_6rr67.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/1c/9b/537738_6rr67.jpg",
       "localCover": "/anime/covers/537738.jpg"
     },
     {
@@ -1189,7 +1189,7 @@
       "ratingTotal": 7,
       "doing": 16,
       "url": "https://bgm.tv/subject/700678",
-      "img": "https://lain.bgm.tv/pic/cover/s/cb/da/700678_4sTY4.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/cb/da/700678_4sTY4.jpg",
       "localCover": "/anime/covers/700678.jpg"
     },
     {
@@ -1204,8 +1204,8 @@
       "ratingTotal": 2,
       "doing": 1,
       "url": "https://bgm.tv/subject/698981",
-      "img": "https://lain.bgm.tv/pic/cover/s/91/f3/698981_S7sct.jpg",
-      "localCover": "/anime/covers/698981.jpg"
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/91/f3/698981_S7sct.jpg",
+      "localCover": ""
     },
     {
       "id": 538631,
@@ -1219,7 +1219,7 @@
       "ratingTotal": 6,
       "doing": 33,
       "url": "https://bgm.tv/subject/538631",
-      "img": "https://lain.bgm.tv/pic/cover/s/17/cc/538631_ll0LH.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/17/cc/538631_ll0LH.jpg",
       "localCover": "/anime/covers/538631.jpg"
     },
     {
@@ -1234,7 +1234,7 @@
       "ratingTotal": 43,
       "doing": 260,
       "url": "https://bgm.tv/subject/499474",
-      "img": "https://lain.bgm.tv/pic/cover/s/0f/d4/499474_bheyE.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/0f/d4/499474_bheyE.jpg",
       "localCover": "/anime/covers/499474.jpg"
     },
     {
@@ -1249,7 +1249,7 @@
       "ratingTotal": 1,
       "doing": 2,
       "url": "https://bgm.tv/subject/701310",
-      "img": "https://lain.bgm.tv/pic/cover/s/e8/cc/701310_t4Gsn.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/e8/cc/701310_t4Gsn.jpg",
       "localCover": "/anime/covers/701310.jpg"
     },
     {
@@ -1264,7 +1264,7 @@
       "ratingTotal": 134,
       "doing": 905,
       "url": "https://bgm.tv/subject/657656",
-      "img": "https://lain.bgm.tv/pic/cover/s/82/02/657656_z4b72.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/82/02/657656_z4b72.jpg",
       "localCover": "/anime/covers/657656.jpg"
     },
     {
@@ -1279,7 +1279,7 @@
       "ratingTotal": 101,
       "doing": 829,
       "url": "https://bgm.tv/subject/621108",
-      "img": "https://lain.bgm.tv/pic/cover/s/5c/04/621108_guUyJ.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/5c/04/621108_guUyJ.jpg",
       "localCover": "/anime/covers/621108.jpg"
     },
     {
@@ -1294,7 +1294,7 @@
       "ratingTotal": 26,
       "doing": 147,
       "url": "https://bgm.tv/subject/617948",
-      "img": "https://lain.bgm.tv/pic/cover/s/70/c2/617948_Mm3mn.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/70/c2/617948_Mm3mn.jpg",
       "localCover": "/anime/covers/617948.jpg"
     },
     {
@@ -1309,7 +1309,7 @@
       "ratingTotal": 43,
       "doing": 199,
       "url": "https://bgm.tv/subject/701782",
-      "img": "https://lain.bgm.tv/pic/cover/s/e8/30/701782_CGGYY.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/e8/30/701782_CGGYY.jpg",
       "localCover": "/anime/covers/701782.jpg"
     },
     {
@@ -1324,7 +1324,7 @@
       "ratingTotal": 10,
       "doing": 27,
       "url": "https://bgm.tv/subject/563508",
-      "img": "https://lain.bgm.tv/pic/cover/s/56/5e/563508_t2XEq.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/56/5e/563508_t2XEq.jpg",
       "localCover": "/anime/covers/563508.jpg"
     },
     {
@@ -1339,7 +1339,7 @@
       "ratingTotal": 108,
       "doing": 860,
       "url": "https://bgm.tv/subject/567896",
-      "img": "https://lain.bgm.tv/pic/cover/s/be/e7/567896_RWffW.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/be/e7/567896_RWffW.jpg",
       "localCover": "/anime/covers/567896.jpg"
     },
     {
@@ -1354,7 +1354,7 @@
       "ratingTotal": 2012,
       "doing": 13248,
       "url": "https://bgm.tv/subject/554779",
-      "img": "https://lain.bgm.tv/pic/cover/s/17/c7/554779_oPitO.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/17/c7/554779_oPitO.jpg",
       "localCover": "/anime/covers/554779.jpg"
     },
     {
@@ -1369,7 +1369,7 @@
       "ratingTotal": 11645,
       "doing": 10943,
       "url": "https://bgm.tv/subject/899",
-      "img": "https://lain.bgm.tv/pic/cover/s/01/88/899_REwVW.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/01/88/899_REwVW.jpg",
       "localCover": "/anime/covers/899.jpg"
     },
     {
@@ -1384,7 +1384,7 @@
       "ratingTotal": 317,
       "doing": 2340,
       "url": "https://bgm.tv/subject/637802",
-      "img": "https://lain.bgm.tv/pic/cover/s/7a/49/637802_YVTam.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/7a/49/637802_YVTam.jpg",
       "localCover": "/anime/covers/637802.jpg"
     },
     {
@@ -1399,7 +1399,7 @@
       "ratingTotal": 18,
       "doing": 141,
       "url": "https://bgm.tv/subject/507820",
-      "img": "https://lain.bgm.tv/pic/cover/s/32/ed/507820_nLOH8.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/32/ed/507820_nLOH8.jpg",
       "localCover": "/anime/covers/507820.jpg"
     },
     {
@@ -1414,7 +1414,7 @@
       "ratingTotal": 236,
       "doing": 1876,
       "url": "https://bgm.tv/subject/616808",
-      "img": "https://lain.bgm.tv/pic/cover/s/f9/ae/616808_F80Sl.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/f9/ae/616808_F80Sl.jpg",
       "localCover": "/anime/covers/616808.jpg"
     },
     {
@@ -1429,8 +1429,8 @@
       "ratingTotal": 212,
       "doing": 1463,
       "url": "https://bgm.tv/subject/456078",
-      "img": "https://lain.bgm.tv/pic/cover/s/f5/6b/456078_jtjPi.jpg",
-      "localCover": "/anime/covers/456078.jpg"
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/f5/6b/456078_jtjPi.jpg",
+      "localCover": ""
     },
     {
       "id": 559080,
@@ -1444,8 +1444,8 @@
       "ratingTotal": 15,
       "doing": 108,
       "url": "https://bgm.tv/subject/559080",
-      "img": "https://lain.bgm.tv/pic/cover/s/0b/dc/559080_4QJvx.jpg",
-      "localCover": "/anime/covers/559080.jpg"
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/0b/dc/559080_4QJvx.jpg",
+      "localCover": ""
     },
     {
       "id": 702192,
@@ -1459,7 +1459,7 @@
       "ratingTotal": 20,
       "doing": 65,
       "url": "https://bgm.tv/subject/702192",
-      "img": "https://lain.bgm.tv/pic/cover/s/27/2f/702192_311Ln.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/27/2f/702192_311Ln.jpg",
       "localCover": "/anime/covers/702192.jpg"
     },
     {
@@ -1474,7 +1474,7 @@
       "ratingTotal": 49,
       "doing": 348,
       "url": "https://bgm.tv/subject/617273",
-      "img": "https://lain.bgm.tv/pic/cover/s/60/14/617273_dhFwZ.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/60/14/617273_dhFwZ.jpg",
       "localCover": "/anime/covers/617273.jpg"
     },
     {
@@ -1489,7 +1489,7 @@
       "ratingTotal": 259,
       "doing": 1314,
       "url": "https://bgm.tv/subject/636512",
-      "img": "https://lain.bgm.tv/pic/cover/s/42/ae/636512_oOtDt.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/42/ae/636512_oOtDt.jpg",
       "localCover": "/anime/covers/636512.jpg"
     },
     {
@@ -1504,7 +1504,7 @@
       "ratingTotal": 211,
       "doing": 1194,
       "url": "https://bgm.tv/subject/586255",
-      "img": "https://lain.bgm.tv/pic/cover/s/9e/00/586255_FcfsN.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/9e/00/586255_FcfsN.jpg",
       "localCover": "/anime/covers/586255.jpg"
     },
     {
@@ -1519,7 +1519,7 @@
       "ratingTotal": 143,
       "doing": 831,
       "url": "https://bgm.tv/subject/542007",
-      "img": "https://lain.bgm.tv/pic/cover/s/61/81/542007_wNKJa.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/61/81/542007_wNKJa.jpg",
       "localCover": "/anime/covers/542007.jpg"
     },
     {
@@ -1534,7 +1534,7 @@
       "ratingTotal": 50,
       "doing": 299,
       "url": "https://bgm.tv/subject/657084",
-      "img": "https://lain.bgm.tv/pic/cover/s/ed/4a/657084_PZj4J.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/ed/4a/657084_PZj4J.jpg",
       "localCover": "/anime/covers/657084.jpg"
     },
     {
@@ -1549,7 +1549,7 @@
       "ratingTotal": 66,
       "doing": 452,
       "url": "https://bgm.tv/subject/568525",
-      "img": "https://lain.bgm.tv/pic/cover/s/3a/11/568525_ovn2M.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/3a/11/568525_ovn2M.jpg",
       "localCover": "/anime/covers/568525.jpg"
     },
     {
@@ -1564,7 +1564,7 @@
       "ratingTotal": 63,
       "doing": 320,
       "url": "https://bgm.tv/subject/613256",
-      "img": "https://lain.bgm.tv/pic/cover/s/7b/a7/613256_fxVvG.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/7b/a7/613256_fxVvG.jpg",
       "localCover": "/anime/covers/613256.jpg"
     },
     {
@@ -1579,7 +1579,7 @@
       "ratingTotal": 159,
       "doing": 949,
       "url": "https://bgm.tv/subject/606716",
-      "img": "https://lain.bgm.tv/pic/cover/s/15/11/606716_Om183.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/15/11/606716_Om183.jpg",
       "localCover": "/anime/covers/606716.jpg"
     },
     {
@@ -1594,7 +1594,7 @@
       "ratingTotal": 1,
       "doing": 15,
       "url": "https://bgm.tv/subject/637206",
-      "img": "https://lain.bgm.tv/pic/cover/s/62/0c/637206_BoQXi.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/62/0c/637206_BoQXi.jpg",
       "localCover": "/anime/covers/637206.jpg"
     },
     {
@@ -1609,7 +1609,7 @@
       "ratingTotal": 0,
       "doing": 9,
       "url": "https://bgm.tv/subject/694622",
-      "img": "https://lain.bgm.tv/pic/cover/s/fe/1b/694622_NhQb3.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/fe/1b/694622_NhQb3.jpg",
       "localCover": "/anime/covers/694622.jpg"
     },
     {
@@ -1624,7 +1624,7 @@
       "ratingTotal": 0,
       "doing": 3,
       "url": "https://bgm.tv/subject/654678",
-      "img": "https://lain.bgm.tv/pic/cover/s/8d/0c/654678_mR190.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/8d/0c/654678_mR190.jpg",
       "localCover": "/anime/covers/654678.jpg"
     },
     {
@@ -1639,7 +1639,7 @@
       "ratingTotal": 0,
       "doing": 3,
       "url": "https://bgm.tv/subject/701565",
-      "img": "https://lain.bgm.tv/pic/cover/s/79/c2/701565_WkAaz.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/79/c2/701565_WkAaz.jpg",
       "localCover": "/anime/covers/701565.jpg"
     },
     {
@@ -1654,7 +1654,7 @@
       "ratingTotal": 0,
       "doing": 1,
       "url": "https://bgm.tv/subject/712500",
-      "img": "https://lain.bgm.tv/pic/cover/s/bb/77/712500_Ene6m.jpg",
+      "img": "https://lain.bgm.tv/r/600/pic/cover/l/bb/77/712500_Ene6m.jpg",
       "localCover": "/anime/covers/712500.jpg"
     }
   ]

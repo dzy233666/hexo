@@ -50,16 +50,28 @@ function proxyAlive() {
   });
 }
 
-/** 补全协议并优先取小图（卡片只有 150px 宽，大图没必要） */
+/** 补全协议；并借助 Bangumi 的 /r/{宽}/ 缩放接口把大图压到卡片够用的尺寸 */
+function sizedUrl(url, width) {
+  const u = String(url || '').replace(/^http:\/\//, 'https://');
+  if (!/lain\.bgm\.tv\/pic\//.test(u)) return u;
+  return u.replace('lain.bgm.tv/pic/', `lain.bgm.tv/r/${width}/pic/`);
+}
+
+/**
+ * 选图策略（2026-10-23 修正）：原来用 small 只有 78×44，高分屏下糊得厉害。
+ * Bangumi 除 large 外的档位都很小（common 150 / medium 100 / small 78 / grid 48），
+ * 唯一可用的是 large（原图），所以统一取 large 再走 /r/600/ 缩放（约 600px、26KB）。
+ */
 function pickImage(images) {
   if (!images) return '';
-  const url = images.small || images.common || images.grid || images.large || '';
-  return url ? url.replace(/^http:\/\//, 'https://') : '';
+  const base = images.large || images.common || images.small || images.grid || '';
+  return sizedUrl(base, 600);
 }
 
 async function downloadCover(id, url) {
   const file = path.join(COVER_DIR, `${id}.jpg`);
-  if (fs.existsSync(file) && fs.statSync(file).size > 1024) {
+  const force = process.env.BGM_FORCE_COVER === '1'; // 换清晰度后重下：BGM_FORCE_COVER=1
+  if (!force && fs.existsSync(file) && fs.statSync(file).size > 1024) {
     return { path: `/anime/covers/${id}.jpg`, bytes: 0 };
   }
   if (!url) return { path: '', bytes: 0 };
