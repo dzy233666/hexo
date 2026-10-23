@@ -971,13 +971,7 @@ aside:
     content: |
       <div class="anno2">
         <div class="a-sect">
-          <div class="a-row a-flat"><span class="a-lb">关于这个模板</span></div>
-          <p style="margin:.4em 0 0">这是一个演示站点：把 <code>_config.yml</code> 与 <code>_config.fomalhaut.yml</code> 里的站点名、域名、头像、友链换成你自己的，再写几篇文章，就能搭起自己的小站。</p>
-        </div>
-        <div class="a-sect">
-          <div class="a-row a-flat"><span class="a-lb">常用入口</span></div>
-          <div class="a-row"><span class="a-lb">文档</span><a class="a-chip" href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener"><i class="a-dot"></i>Hexo 文档</a><span class="a-note">官方</span></div>
-          <div class="a-row a-sub"><span class="a-lb"></span><a class="a-chip" href="https://github.com/fomalhaut1998/hexo-theme-fomalhaut" target="_blank" rel="noopener"><i class="a-dot"></i>主题仓库</a><span class="a-note">GitHub</span></div>
+          <p style="margin:.4em 0 0">这是“此刻”的小站，愿我和你们天天开心</p>
         </div>
       </div>
 
