@@ -13,4 +13,4 @@ description: 我在看和看过的番剧清单：带 Bangumi 评分、我的评�
   <p class="anime-loading">正在读取追番清单…</p>
 </div>
 
-<script defer data-pjax src="/js/anime-bangumi.js?v=20261023"></script>
+<script defer data-pjax src="/js/anime-bangumi.js?v=20261023b"></script>
