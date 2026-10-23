@@ -1383,7 +1383,7 @@ inject:
     #   pjax 换页不会重复创建。换宠物：改 mascot-boot.js 里的 PACK 常量。
     # 许可：引擎 GPL-3.0-or-later；宠物包 CC-BY-NC-SA-4.0（非商业）——原文在 source/web-mascot/LICENSE 与 NOTICE.txt。
     # 回滚：删掉下面这一行 + 删掉 source/web-mascot 与 source/js/mascot-boot.js 即可。
-    - <script type="module" src="/js/mascot-boot.js?v=20261023"></script> # 看板娘启动器
+    - <script type="module" src="/js/mascot-boot.js?v=20261023b"></script> # 看板娘启动器
 
     # 公告栏 meta 数据条的填充脚本（数字来自侧栏「小站资讯」卡，卡不在或还没渲染就保持 —）
     - |
