@@ -13,7 +13,14 @@ gulp.task('compress', () => {
   // 必须 return 这条 stream：不 return 的话 gulp 会认为任务已结束，
   // 可能在 terser 还没写完 public 时就退出，导致 JS 压缩结果时有时无。
   // [2026-10-03 重构] 原写法漏了 return，且声明了 async 却没有 await。
-  return gulp.src(['./public/**/*.js', '!./public/**/*.min.js'])
+  // [2026-10-23] 排除 /web-mascot/**：那是 web-mascot 的多文件 ESM bundle，
+  //   index.js 里写着 `import { M as n } from "./chunks/..."`，
+  //   而 terser 默认按非模块模式压缩、会重命名导出名，压完 import 就对不上了。
+  return gulp.src([
+    './public/**/*.js',
+    '!./public/**/*.min.js',
+    '!./public/web-mascot/**/*.js'
+  ])
     .pipe(terser())
     .pipe(gulp.dest('./public'));
 });

@@ -1374,6 +1374,16 @@ inject:
     - <script src="/js/inject/ft-ad-extra.js"></script> # 页脚友链补一个「广告位招租」
     - <script src="/js/inject/pc-local-link.js"></script> # 版权卡「文章链接」显示当前域名
     - <script defer src="/js/inject/about-route-probe.js?v=20261006"></script> # 关于页线路卡「实时延迟」徽标（.ab2 作用域）
+    # ── 看板娘（web-mascot 桌宠引擎，站点自托管，2026-10-23 加入）────────────────────
+    # 引擎与宠物素材都在 source/web-mascot/（发布后为 /web-mascot/）：
+    #   index.js + chunks/MascotEngine-*.js   ← 多文件 ESM bundle（gulpfile 已排除压缩，见那里的注释）
+    #   mascot_pack/Neuron/（1.24 MB）、mascot_pack/Eviling/（1.31 MB）
+    # 启动器 source/js/mascot-boot.js：window.load 之后才动态 import()，
+    #   窄屏（≤768px）/ 省流量模式 / 系统偏好减少动效 时整只不加载（省 2.7 MB）；
+    #   pjax 换页不会重复创建。换宠物：改 mascot-boot.js 里的 PACK 常量。
+    # 许可：引擎 GPL-3.0-or-later；宠物包 CC-BY-NC-SA-4.0（非商业）——原文在 source/web-mascot/LICENSE 与 NOTICE.txt。
+    # 回滚：删掉下面这一行 + 删掉 source/web-mascot 与 source/js/mascot-boot.js 即可。
+    - <script type="module" src="/js/mascot-boot.js?v=20261023"></script> # 看板娘启动器
 
     # 公告栏 meta 数据条的填充脚本（数字来自侧栏「小站资讯」卡，卡不在或还没渲染就保持 —）
     - |
