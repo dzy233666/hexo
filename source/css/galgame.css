@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Galgame 清单专用样式（依赖 anime.css 的卡片/网格/标题基础样式）
+   引入：source/box/galgame/index.md
+   ========================================================================== */
+
+/* 开发 · 发售年 */
+.gg-meta {
+  margin-top: 4px;
+  font-size: 0.72em;
+  line-height: 1.4;
+  color: var(--anime-text-dim);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 分组标题右侧的补充文字 */
+.anime-day-extra {
+  margin-left: auto;
+  font-size: 0.72em;
+  font-weight: 400;
+  color: var(--anime-text-dim);
+}
+
+/* ---------- NSFW：默认模糊 + 遮罩，点一次全局展开 ---------- */
+.gg-card.is-nsfw .anime-cover img {
+  filter: blur(16px) saturate(0.8);
+  transform: scale(1.08); /* 模糊会让边缘发虚，稍微放大盖住 */
+}
+
+.gg-card.is-nsfw .anime-cover:hover img {
+  transform: scale(1.08); /* 禁用 anime.css 里的 hover 放大，避免和模糊叠加 */
+}
+
+.gg-nsfw-mask {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.74em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.42);
+  cursor: pointer;
+  text-align: center;
+  padding: 0 8px;
+  transition: background 0.18s ease;
+}
+
+.gg-nsfw-mask:hover {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* 遮罩把整张封面挡住了，分数徽标要浮在上面 */
+.gg-card.is-nsfw .anime-score {
+  z-index: 2;
+}
+
+/* ---------- 窄屏 ---------- */
+@media screen and (max-width: 768px) {
+  .gg-meta {
+    font-size: 0.68em;
+  }
+}

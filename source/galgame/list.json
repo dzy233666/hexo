@@ -1,0 +1,107 @@
+{
+  "generatedAt": "2026-10-24T13:42:16.950Z",
+  "user": {
+    "id": "1044188",
+    "name": "吹响吧",
+    "url": "https://bgm.tv/user/1044188"
+  },
+  "counts": {
+    "doing": 3,
+    "collect": 1,
+    "wish": 0
+  },
+  "source": "Bangumi API v0 (/v0/users/{id}/collections?subject_type=4 + /v0/subjects/{id})",
+  "items": [
+    {
+      "id": 1020,
+      "name": "うみねこのなく頃に",
+      "nameCN": "海猫鸣泣之时",
+      "date": "2008-12-29",
+      "releaseYear": "2008",
+      "score": 8.4,
+      "rank": 120,
+      "img": "https://lain.bgm.tv/pic/cover/l/65/cc/1020_L3HDr.jpg",
+      "url": "https://bgm.tv/subject/1020",
+      "status": "doing",
+      "statusLabel": "在玩",
+      "myRate": 0,
+      "comment": "",
+      "tags": [
+        "龙骑士07",
+        "全年龄",
+        "猎奇"
+      ],
+      "updatedAt": "2026-10-24T21:34:29+08:00",
+      "collectedYear": "2026",
+      "nsfw": false,
+      "developer": "07th Expansion",
+      "localCover": "/galgame/covers/1020.jpg"
+    },
+    {
+      "id": 215470,
+      "name": "レイジングループ",
+      "nameCN": "人狼村之谜",
+      "date": "2015-12-03",
+      "releaseYear": "2015",
+      "score": 8.2,
+      "rank": 275,
+      "img": "https://lain.bgm.tv/pic/cover/l/49/6c/215470_af6bA.jpg",
+      "url": "https://bgm.tv/subject/215470",
+      "status": "doing",
+      "statusLabel": "在玩",
+      "myRate": 0,
+      "comment": "",
+      "tags": [],
+      "updatedAt": "2026-10-24T21:33:59+08:00",
+      "collectedYear": "2026",
+      "nsfw": false,
+      "developer": "KEMCO",
+      "localCover": "/galgame/covers/215470.jpg"
+    },
+    {
+      "id": 540053,
+      "name": "魔法使いの夜",
+      "nameCN": "魔法使之夜",
+      "date": "2022-12-08",
+      "releaseYear": "2022",
+      "score": 8.8,
+      "rank": 0,
+      "img": "https://lain.bgm.tv/pic/cover/l/98/85/540053_b5tqb.jpg",
+      "url": "https://bgm.tv/subject/540053",
+      "status": "doing",
+      "statusLabel": "在玩",
+      "myRate": 0,
+      "comment": "",
+      "tags": [],
+      "updatedAt": "2026-10-24T21:32:03+08:00",
+      "collectedYear": "2026",
+      "nsfw": false,
+      "developer": "TYPE-MOON",
+      "localCover": "/galgame/covers/540053.jpg"
+    },
+    {
+      "id": 280440,
+      "name": "死月妖花～四月八日～",
+      "nameCN": "",
+      "date": "2019-04-02",
+      "releaseYear": "2019",
+      "score": 8.8,
+      "rank": 15,
+      "img": "https://lain.bgm.tv/pic/cover/l/67/0d/280440_do0j5.jpg",
+      "url": "https://bgm.tv/subject/280440",
+      "status": "collect",
+      "statusLabel": "玩过",
+      "myRate": 9,
+      "comment": "",
+      "tags": [
+        "全年龄",
+        "猎奇"
+      ],
+      "updatedAt": "2026-10-24T21:33:08+08:00",
+      "collectedYear": "2026",
+      "nsfw": false,
+      "developer": "New++",
+      "localCover": "/galgame/covers/280440.jpg"
+    }
+  ]
+}
