@@ -27,3 +27,6 @@ bak/
 # 本地素材、检查产物
 images/
 cdn-check/
+
+# 酷狗/番剧抓取脚本的临时缓存（含登录态，绝不入库）
+tools/.cache/

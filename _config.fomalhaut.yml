@@ -1123,8 +1123,11 @@ pjax:
   exclude:
 
 # Inject the css and script (aplayer/meting)
+# [2026-10-25] 关闭：八音盒已改成「我的年度歌单」纯静态列表（不播放音频），
+# 全站不再需要 APlayer + Meting 那 ~72 KB JS/CSS。
+# 想恢复音乐播放器：把 enable 改回 true，并在页面 front-matter 加 aplayer: true。
 aplayerInject:
-  enable: true
+  enable: false
   per_page: false
 
 # Snackbar (Toast Notification 彈窗)

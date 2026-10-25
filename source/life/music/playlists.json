@@ -1,0 +1,451 @@
+{
+  "generatedAt": "2026-10-25T04:08:05.666Z",
+  "source": "kugou cloudlist (/v7/get_all_list + /v4/get_list_all_file)",
+  "years": [
+    {
+      "year": 2025,
+      "listid": "47",
+      "name": "我的2025年度歌单",
+      "count": 10,
+      "cover": "/life/music/covers/47.jpg",
+      "songs": [
+        {
+          "index": 1,
+          "name": "ニライカナイ",
+          "singer": "HoneyComeBear",
+          "album": "HappyEND",
+          "duration": 162,
+          "durationText": "2:42"
+        },
+        {
+          "index": 2,
+          "name": "Memory of Dystopia",
+          "singer": "ARForest",
+          "album": "AD:PIANO VII -Alternative-",
+          "duration": 295,
+          "durationText": "4:55"
+        },
+        {
+          "index": 3,
+          "name": "Ther",
+          "singer": "Kraffa",
+          "album": "Short note from time",
+          "duration": 309,
+          "durationText": "5:09"
+        },
+        {
+          "index": 4,
+          "name": "アメヲマツ、 (等雨、)",
+          "singer": "美波",
+          "album": "アメヲマツ、",
+          "duration": 294,
+          "durationText": "4:54"
+        },
+        {
+          "index": 5,
+          "name": "心音",
+          "singer": "平葵",
+          "album": "心音",
+          "duration": 147,
+          "durationText": "2:27"
+        },
+        {
+          "index": 6,
+          "name": "刹那、夏が終わっていく",
+          "singer": "こはならむ",
+          "album": "刹那、夏が終わっていく",
+          "duration": 212,
+          "durationText": "3:32"
+        },
+        {
+          "index": 7,
+          "name": "SpaceJellyfish",
+          "singer": "HoneyComeBear",
+          "album": "SpaceJellyfish",
+          "duration": 310,
+          "durationText": "5:10"
+        },
+        {
+          "index": 8,
+          "name": "アメヲマツ、 (等雨、)",
+          "singer": "美波",
+          "album": "DROP",
+          "duration": 295,
+          "durationText": "4:55"
+        },
+        {
+          "index": 9,
+          "name": "老人と海 (老人与海)",
+          "singer": "ヨルシカ",
+          "album": "老人と海",
+          "duration": 256,
+          "durationText": "4:16"
+        },
+        {
+          "index": 10,
+          "name": "Revolver",
+          "singer": "HoneyComeBear",
+          "album": "Revolver",
+          "duration": 211,
+          "durationText": "3:31"
+        }
+      ]
+    },
+    {
+      "year": 2024,
+      "listid": "41",
+      "name": "我的2024年度歌单",
+      "count": 10,
+      "cover": "/life/music/covers/41.jpg",
+      "songs": [
+        {
+          "index": 1,
+          "name": "雨ほうし (祈雨和尚)",
+          "singer": "平葵",
+          "album": "雨ほうし",
+          "duration": 234,
+          "durationText": "3:54"
+        },
+        {
+          "index": 2,
+          "name": "アメヲマツ、 (等雨、)",
+          "singer": "美波",
+          "album": "DROP",
+          "duration": 295,
+          "durationText": "4:55"
+        },
+        {
+          "index": 3,
+          "name": "森の教会",
+          "singer": "ヨルシカ",
+          "album": "エルマ",
+          "duration": 120,
+          "durationText": "2:00"
+        },
+        {
+          "index": 4,
+          "name": "アメヲマツ、 (等雨、)",
+          "singer": "美波",
+          "album": "アメヲマツ、",
+          "duration": 294,
+          "durationText": "4:54"
+        },
+        {
+          "index": 5,
+          "name": "光るとき (闪光之时)",
+          "singer": "羊文学",
+          "album": "光るとき",
+          "duration": 352,
+          "durationText": "5:52"
+        },
+        {
+          "index": 6,
+          "name": "心音",
+          "singer": "平葵",
+          "album": "心音",
+          "duration": 147,
+          "durationText": "2:27"
+        },
+        {
+          "index": 7,
+          "name": "inside you",
+          "singer": "milet",
+          "album": "inside you",
+          "duration": 221,
+          "durationText": "3:41"
+        },
+        {
+          "index": 8,
+          "name": "水瀬いのり - 八月のスーベニア (八月的礼物)",
+          "singer": "",
+          "album": "",
+          "duration": 311,
+          "durationText": "5:11"
+        },
+        {
+          "index": 9,
+          "name": "Revolver",
+          "singer": "HoneyComeBear",
+          "album": "Revolver",
+          "duration": 211,
+          "durationText": "3:31"
+        },
+        {
+          "index": 10,
+          "name": "老人と海 (老人与海)",
+          "singer": "ヨルシカ",
+          "album": "老人と海",
+          "duration": 256,
+          "durationText": "4:16"
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "listid": "37",
+      "name": "我的2023年度歌单",
+      "count": 10,
+      "cover": "/life/music/covers/37.jpg",
+      "songs": [
+        {
+          "index": 1,
+          "name": "Revolver",
+          "singer": "HoneyComeBear",
+          "album": "Revolver",
+          "duration": 211,
+          "durationText": "3:31"
+        },
+        {
+          "index": 2,
+          "name": "アメヲマツ、 (等雨、)",
+          "singer": "美波",
+          "album": "DROP",
+          "duration": 295,
+          "durationText": "4:55"
+        },
+        {
+          "index": 3,
+          "name": "君と僕の154小節戦争 (你与我的154小节战争)",
+          "singer": "美波",
+          "album": "DROP",
+          "duration": 298,
+          "durationText": "4:58"
+        },
+        {
+          "index": 4,
+          "name": "Prologue",
+          "singer": "美波",
+          "album": "カワキヲアメク",
+          "duration": 331,
+          "durationText": "5:31"
+        },
+        {
+          "index": 5,
+          "name": "テレパス (Telepath)",
+          "singer": "ヨルシカ",
+          "album": "テレパス",
+          "duration": 294,
+          "durationText": "4:54"
+        },
+        {
+          "index": 6,
+          "name": "ライラック (丁香花)",
+          "singer": "美波",
+          "album": "カワキヲアメク",
+          "duration": 303,
+          "durationText": "5:03"
+        },
+        {
+          "index": 7,
+          "name": "Eternal Goodbye",
+          "singer": "美波",
+          "album": "Eternal Goodbye",
+          "duration": 181,
+          "durationText": "3:01"
+        },
+        {
+          "index": 8,
+          "name": "21",
+          "singer": "Gracie Abrams",
+          "album": "minor",
+          "duration": 185,
+          "durationText": "3:05"
+        },
+        {
+          "index": 9,
+          "name": "counter・attack-mankind",
+          "singer": "澤野弘之",
+          "album": "TVアニメ「進撃の巨人」オリジナルサウンドトラック 音楽:澤野弘之",
+          "duration": 367,
+          "durationText": "6:07"
+        },
+        {
+          "index": 10,
+          "name": "Rё∀L (真实)",
+          "singer": "Cyua",
+          "album": "ギルティクラウン オリジナルサウンドトラック",
+          "duration": 252,
+          "durationText": "4:12"
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "listid": "49",
+      "name": "我的2022年度歌单",
+      "count": 10,
+      "cover": "/life/music/covers/49.jpg",
+      "songs": [
+        {
+          "index": 1,
+          "name": "Cage",
+          "singer": "Tielle、SawanoHiroyuki[nZk]",
+          "album": "Binary Star/Cage(期間生産限定盤A)",
+          "duration": 285,
+          "durationText": "4:45"
+        },
+        {
+          "index": 2,
+          "name": "Torches",
+          "singer": "Aimer",
+          "album": "トーチズ",
+          "duration": 294,
+          "durationText": "4:54"
+        },
+        {
+          "index": 3,
+          "name": "ニルバナ",
+          "singer": "Tia",
+          "album": "ニルバナ",
+          "duration": 265,
+          "durationText": "4:25"
+        },
+        {
+          "index": 4,
+          "name": "Fly High",
+          "singer": "milet",
+          "album": "visions (Explicit)",
+          "duration": 249,
+          "durationText": "4:09"
+        },
+        {
+          "index": 5,
+          "name": "Mine (Illenium Remix)",
+          "singer": "ILLENIUM、Phoebe Ryan",
+          "album": "Mine (Illenium Remix)",
+          "duration": 250,
+          "durationText": "4:10"
+        },
+        {
+          "index": 6,
+          "name": "The Reluctant Heroes <Vocal: mpi>",
+          "singer": "mpi、澤野弘之",
+          "album": "TVアニメ「進撃の巨人」オリジナルサウンドトラック 音楽:澤野弘之",
+          "duration": 267,
+          "durationText": "4:27"
+        },
+        {
+          "index": 7,
+          "name": "réaliser (实现)",
+          "singer": "TRINITYAiLE",
+          "album": "realiser",
+          "duration": 232,
+          "durationText": "3:52"
+        },
+        {
+          "index": 8,
+          "name": "老人と海 (老人与海)",
+          "singer": "ヨルシカ",
+          "album": "老人と海",
+          "duration": 256,
+          "durationText": "4:16"
+        },
+        {
+          "index": 9,
+          "name": "悪魔の子 (恶魔之子)",
+          "singer": "ヒグチアイ",
+          "album": "悪魔の子",
+          "duration": 228,
+          "durationText": "3:48"
+        },
+        {
+          "index": 10,
+          "name": "U & Me",
+          "singer": "ILLENIUM、Sasha Alex Sloan",
+          "album": "Fallen Embers (Explicit)",
+          "duration": 214,
+          "durationText": "3:34"
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "listid": "48",
+      "name": "我的2021年度歌单",
+      "count": 10,
+      "cover": "/life/music/covers/48.jpg",
+      "songs": [
+        {
+          "index": 1,
+          "name": "Call of Silence",
+          "singer": "澤野弘之",
+          "album": "TVアニメ「進撃の巨人」Season 2 オリジナルサウンドトラック 音楽:澤野弘之",
+          "duration": 178,
+          "durationText": "2:58"
+        },
+        {
+          "index": 2,
+          "name": "星屑ビーナス (星尘中的维纳斯)",
+          "singer": "Aimer",
+          "album": "あなたに出会わなければ~夏雪冬花~/星屑ビーナス",
+          "duration": 253,
+          "durationText": "4:13"
+        },
+        {
+          "index": 3,
+          "name": "東京ウインターセッション (东京冬日相会)",
+          "singer": "神谷浩史、鈴村健一、戸松遥、豊崎愛生、梶裕贵、阿澄佳奈、HoneyWorks、合田美桜、芹沢春輝、早坂あかり、榎本夏樹、瀬戸口優、望月蒼太",
+          "album": "東京ウインターセッション",
+          "duration": 256,
+          "durationText": "4:16"
+        },
+        {
+          "index": 4,
+          "name": "LOSER",
+          "singer": "米津玄師",
+          "album": "LOSER / ナンバーナイン",
+          "duration": 244,
+          "durationText": "4:04"
+        },
+        {
+          "index": 5,
+          "name": "Avid",
+          "singer": "SawanoHiroyuki[nZk]、瑞葵",
+          "album": "Avid",
+          "duration": 250,
+          "durationText": "4:10"
+        },
+        {
+          "index": 6,
+          "name": "恋のうた (恋歌)",
+          "singer": "Yunomi、鬼頭明里",
+          "album": "恋のうた (feat. 由崎司)",
+          "duration": 210,
+          "durationText": "3:30"
+        },
+        {
+          "index": 7,
+          "name": "Fly (feat. Summer Haze)",
+          "singer": "Sineself、Esydia、Summer Haze",
+          "album": "Fly (feat. Summer Haze)",
+          "duration": 219,
+          "durationText": "3:39"
+        },
+        {
+          "index": 8,
+          "name": "東京オータムセッション (东京秋日相会)",
+          "singer": "神谷浩史、戸松遥、梶裕贵、阿澄佳奈、鈴村健一、豊崎愛生、芹沢春輝、合田美桜、早坂あかり、HoneyWorks、榎本夏樹、瀬戸口優、望月蒼太",
+          "album": "好きすぎてやばい。～告白実行委員会キャラクターソング集～",
+          "duration": 283,
+          "durationText": "4:43"
+        },
+        {
+          "index": 9,
+          "name": "Believe in you",
+          "singer": "nonoc",
+          "album": "Believe in you",
+          "duration": 279,
+          "durationText": "4:39"
+        },
+        {
+          "index": 10,
+          "name": "Door",
+          "singer": "高橋李依",
+          "album": "TVアニメ「Re:ゼロから始める異世界生活」キャラクターソングアルバム",
+          "duration": 299,
+          "durationText": "4:59"
+        }
+      ]
+    }
+  ]
+}
