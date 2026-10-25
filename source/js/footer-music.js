@@ -1,5 +1,5 @@
 /*!
- * footer-music.js —— 页脚「猜你想看」右下角空位补一条「听点音乐」→ /life/music/（八音盒）
+ * footer-music.js —— 页脚「猜你想看」右下角空位补一条「听点音乐」→ /life/music/（歌单）
  *
  * 【为什么走注入，而不是改主题源码】
  *   「猜你想看」这批链接是硬编码在 themes/fomalhaut/layout/includes/footer.pug:14-31 的 pug 静态标签；

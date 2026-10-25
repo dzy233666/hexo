@@ -1,5 +1,5 @@
 /**
- * 八音盒：我的年度歌单（2021-2025）
+ * 歌单：我的年度歌单（2021-2025）
  *
  * 数据文件：/life/music/playlists.json（由 tools/fetch-kugou.js 生成）
  *   years[]: { year, listid, name, count, cover, songs[{index,name,singer,album,duration,durationText}] }

@@ -9,7 +9,7 @@ menu:
     文章统计: /tags/ || icon-shujutongji1 || faa-tada
     随便逛逛: javascript:randomPost(); || icon-zuji1 || faa-tada
   八宝箱 || icon-xiangzi || faa-tada || hide:
-    八音盒: /life/music/ || icon-yinle || faa-tada
+    歌单: /life/music/ || icon-yinle || faa-tada
     画廊: /box/gallery/ || icon-tubiaozhizuomoban || faa-tada
     天文馆: /box/astronomy/ || icon-wangyuanjing || faa-tada
     网址导航: /box/nav/ || icon-zhifengche || faa-tada

@@ -1000,7 +1000,7 @@ AI_PROXY_ALLOW_SUFFIXES=your-domain.com
 | 网址导航 | `source/box/nav/index.md` | 页面内 HTML + `source/box/nav/icons/` 图标 |
 | 关于 | `source/personal/about/index.md` | 页面内 HTML，样式在 `source/css/about-page.css` |
 | 旧时光（时间线） | `source/site/time/index.md` | `{% timeline %}` 标签 |
-| 八音盒 | `source/life/music/index.md` | Meting API + 网易云歌单 ID |
+| 歌单 | `source/life/music/index.md` | 酷狗年度歌单（`tools/fetch-kugou.js` 抓取 → 静态 JSON，不播放音频） |
 | 小游戏 / 动画 | `source/life/games/`、`source/box/animation/` | 外链演示 |
 | 天文星图 | `source/box/astronomy/voyager.html` | 独立 HTML，`skip_render` 不参与渲染 |
 
