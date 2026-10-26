@@ -1,22 +1,20 @@
 /**
  * 画廊 · 背景专区：手动切换全站壁纸
  *
- * 复用的既有机制（不另造一套）：
- *   source/js/modules/appearance-backgrounds.js 里的全局函数
- *     changeAppearanceBackground(value)  —— 传入 URL 或 'default'，内部会先探针校验图片，成功才应用
- *     localStorage['blogbg']             —— 主题保存背景偏好的键（同时被美化面板和首屏 beauty-boot.js 读取）
+ * 真正的应用逻辑在 source/js/inject/wallpaper-boot.js（inject.head，全站生效）：
+ *   window.wpSetBackground(url) / wpResetBackground() / wpCurrentBackground()
  *
- * 所以这里切换之后：
- *   1. 全站四套背景变量（default / darkmode / mobileday / mobilenight）会一起换掉
- *   2. 刷新后由主题自己恢复，不用我们管
+ * 这里只负责页面交互：校验图片 → 调上面的 API → 更新按钮状态与提示。
  *
- * 注意：主题的校验函数用的是 `new URL(value)`，只接受**绝对地址**，
- * 所以这里必须拼上 location.origin，不能直接传 /assets/xxx.webp。
+ * 【为什么不用主题的 changeAppearanceBackground()】
+ *   2026-10-26 排查发现：fomalhaut 的 #web_bg 背景是构建时写死在 index.css 里的
+ *   （#web_bg{background:url(/assets/bg-violet.webp)}），**不读** --default-bg 变量。
+ *   主题那套「自定义背景」只改变量、不改画面，于是出现"提示成功但没有变化"。
+ *   所以这里改走直接覆盖 #web_bg 的方案。
  */
 (function () {
   'use strict';
 
-  var KEY = 'blogbg';
   var grid = null;
   var tipEl = null;
 
@@ -26,17 +24,12 @@
     return location.origin + path;
   }
 
-  function savedValue() {
-    try {
-      return localStorage.getItem(KEY) || 'default';
-    } catch (e) {
-      return 'default';
-    }
+  function savedUrl() {
+    return typeof window.wpCurrentBackground === 'function' ? window.wpCurrentBackground() : '';
   }
 
-  /** blogbg 里存的是 url("https://…/x.webp") 这种字符串，这里做包含判断 */
   function isActive(path) {
-    return savedValue().indexOf(absUrl(path)) !== -1;
+    return savedUrl() === absUrl(path);
   }
 
   function toast(msg, type) {
@@ -46,46 +39,66 @@
     clearTimeout(tipEl.__t);
     tipEl.__t = setTimeout(function () {
       tipEl.classList.remove('is-on');
-    }, 3200);
+    }, 3600);
   }
 
-  function fn() {
-    return typeof window.changeAppearanceBackground === 'function'
-      ? window.changeAppearanceBackground
-      : null;
+  /** 先探针加载一遍，图片坏了就不应用（避免全站背景变空白） */
+  function preload(url) {
+    return new Promise(function (resolve) {
+      var img = new Image();
+      var done = false;
+      var timer = setTimeout(function () {
+        if (done) return;
+        done = true;
+        img.src = '';
+        resolve(false);
+      }, 15000);
+      img.onload = function () {
+        if (done) return;
+        done = true;
+        clearTimeout(timer);
+        resolve(true);
+      };
+      img.onerror = function () {
+        if (done) return;
+        done = true;
+        clearTimeout(timer);
+        resolve(false);
+      };
+      img.src = url;
+    });
   }
 
   /* ---------------- 应用 / 恢复 / 随机 ---------------- */
 
   function applyPath(path, name) {
-    var apply = fn();
-    if (!apply) {
-      toast('背景模块还没加载完，稍等一秒再点', 'err');
+    var set = window.wpSetBackground;
+    if (typeof set !== 'function') {
+      toast('壁纸模块还没加载完，刷新页面再试一次', 'err');
       return;
     }
+    var url = absUrl(path);
     toast('正在检查这张图片…', 'info');
-    Promise.resolve(apply(absUrl(path))).then(function (ok) {
-      if (ok) {
-        toast('已切换：' + (name || '新壁纸'), 'ok');
-        sync();
-      } else {
-        toast('切换失败：图片加载不出来，已保留原背景', 'err');
+    preload(url).then(function (ok) {
+      if (!ok) {
+        toast('这张图加载失败了，已保留原背景', 'err');
+        return;
       }
-    }).catch(function (err) {
-      toast('切换出错：' + (err && err.message ? err.message : err), 'err');
+      set(url);
+      toast('已切换：' + (name || '新壁纸') + '（刷新、换页都会保留）', 'ok');
+      sync();
     });
   }
 
   function applyDefault() {
-    var apply = fn();
-    if (!apply) {
-      toast('背景模块还没加载完，稍等一秒再点', 'err');
+    var reset = window.wpResetBackground;
+    if (typeof reset !== 'function') {
+      toast('壁纸模块还没加载完，刷新页面再试一次', 'err');
       return;
     }
-    Promise.resolve(apply('default')).then(function () {
-      toast('已恢复默认背景（随深浅色/屏幕自动切换）', 'ok');
-      sync();
-    });
+    reset();
+    toast('已恢复默认背景（随深浅色/屏幕自动切换）', 'ok');
+    sync();
   }
 
   function randomOne() {
@@ -110,13 +123,7 @@
     });
 
     var label = document.getElementById('wp-current-name');
-    if (label) {
-      var saved = savedValue();
-      if (saved === 'default' || saved === 'null') label.textContent = '默认背景';
-      else if (activeName) label.textContent = activeName;
-      else if (saved.indexOf('url(') === 0) label.textContent = '自定义图片';
-      else label.textContent = '自定义（' + saved + '）';
-    }
+    if (label) label.textContent = activeName || '默认背景（随深浅色/屏幕切换）';
   }
 
   /* ---------------- 初始化 ---------------- */
@@ -148,7 +155,7 @@
     grid.setAttribute('data-ready', '1');
     sync();
 
-    // 主题用 pjax 换页，回来时重新同步一次高亮（不影响已应用的背景）
+    // 主题用 pjax 换页，回来时重新同步一次高亮
     document.addEventListener('pjax:complete', function () {
       if (document.getElementById('wp-grid')) setTimeout(sync, 120);
     });

@@ -1271,6 +1271,14 @@ inject:
     - <script src="/js/inject/ping-route-boot.js"></script> # 延时探测参数（必须在 ping-route.js 之前执行）
     - <script src="/js/inject/ping-route.js"></script> # 公告栏线路延时徽标
     - <script src="/js/inject/beauty-boot.js?v=20261015-solid3"></script> # 美化模块首屏预置（原内联 beautyBoot）
+    # ── 自定义壁纸首屏应用（画廊 · 背景专区用，2026-10-26 新增）──────────────────
+    # source/js/inject/wallpaper-boot.js：读 localStorage['wpbg']，在 head 里追加
+    # <style id="wpbg-style"> 直接覆盖 #web_bg 的 background-image。
+    # 为什么不用主题的 #defineBg/--default-bg：fomalhaut 的 #web_bg 背景是构建时写死在
+    # index.css 里的（url(/assets/bg-violet.webp)），不读那些变量，主题那套改了没画面变化。
+    # 必须同步执行、放在 head（早于首帧），否则会先闪默认壁纸再跳。
+    # 回滚：删掉下面这一行即可（页面上的切换按钮会失效，但不会报错）。
+    - <script src="/js/inject/wallpaper-boot.js?v=20261026"></script> # 自定义壁纸首屏应用
     - <script src="/js/inject/right-menu-state-boot.js"></script> # 侧栏「右键模式」按钮状态同步
     # ── 全站日间 / 夜间首屏预置（站点独立脚本，不改主题源码）────────────────────
     # source/js/inject/daynight-boot.js：访客没手动选过深浅色时，按当天真实日出日落定模式（有手动
